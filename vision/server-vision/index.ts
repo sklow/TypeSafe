@@ -2,6 +2,8 @@
 import { Invalid, type SystemOneRequest, type XImage } from "./types";
 import { SYSTEM, SYSTEM_VISION_NOTE, planChoice, planNoul, planScore, userPrefix, validateTop, type ChoicePlan, type Heading, type NoulStyle } from "./prompts";
 import { LLAMA_URL, aggregateLabels, firstTokenDist, type LoadedImage } from "./llama";
+import { realpath } from "node:fs/promises";
+import { resolve, sep } from "node:path";
 import { choiceAnswer, noulAnswer, normalize, scoreAnswer } from "./format";
 
 const PORT = Number(process.env.PORT ?? 8793);
@@ -22,7 +24,31 @@ interface Probe {
 }
 interface Usage { in: number; out: number }
 
+// x_images[].path は許可ディレクトリ配下の画像のみ読む（任意ファイル読み出し対策）。呼び出し元（vision/run.ts, rag/ui/serve.ts）は vision/figs 系の絶対パスを渡す。
+// 追加は環境変数 VISION_IMAGE_DIRS（":" 区切り）
+const VISION_DIR = resolve(import.meta.dir, "..");
+const ALLOWED_IMAGE_DIRS = ["figs", "figs512", "dummy"].map((d) => resolve(VISION_DIR, d)).concat((process.env.VISION_IMAGE_DIRS ?? "").split(":").filter(Boolean).map((d) => resolve(d)));
+const MAX_IMAGE_BYTES = 20 * 1024 * 1024; // 20MB
 const MIME: Record<string, string> = { png: "image/png", jpg: "image/jpeg", jpeg: "image/jpeg", webp: "image/webp", gif: "image/gif" };
+/** 許可ディレクトリ配下（シンボリックリンク解決後）の既存ファイルなら realpath、そうでなければ null */
+async function safeImagePath(p: string): Promise<string | null> {
+  let real: string;
+  try {
+    real = await realpath(resolve(p));
+  } catch {
+    return null; // 存在しない
+  }
+  for (const d of ALLOWED_IMAGE_DIRS) {
+    let base: string;
+    try {
+      base = await realpath(d);
+    } catch {
+      continue;
+    }
+    if (real.startsWith(base + sep)) return real;
+  }
+  return null;
+}
 async function loadImages(xs: XImage[] | undefined): Promise<LoadedImage[]> {
   if (xs === undefined) return [];
   if (!Array.isArray(xs)) throw new Invalid("x_images must be an array");
@@ -34,9 +60,13 @@ async function loadImages(xs: XImage[] | undefined): Promise<LoadedImage[]> {
         return { name: x.name, dataUri: b.startsWith("data:") ? b : `data:${x.mime ?? "image/png"};base64,${b}` };
       }
       if (!x.path) throw new Invalid(`x_images[${i}] needs path or data_base64`);
-      const f = Bun.file(x.path);
-      if (!(await f.exists())) throw new Invalid(`x_images[${i}].path not found: ${x.path}`);
-      const mime = MIME[x.path.split(".").pop()!.toLowerCase()] ?? "image/png";
+      const ext = typeof x.path === "string" ? x.path.split(".").pop()!.toLowerCase() : "";
+      const mime = MIME[ext];
+      if (typeof x.path !== "string" || !mime) throw new Invalid(`x_images[${i}].path not allowed`);
+      const real = await safeImagePath(x.path);
+      if (!real) throw new Invalid(`x_images[${i}].path not allowed`);
+      const f = Bun.file(real);
+      if (f.size > MAX_IMAGE_BYTES) throw new Invalid(`x_images[${i}].path too large`);
       return { name: x.name, dataUri: `data:${mime};base64,${Buffer.from(await f.arrayBuffer()).toString("base64")}` };
     }),
   );
@@ -196,6 +226,7 @@ async function systemOne(req: SystemOneRequest) {
 }
 
 Bun.serve({
+  hostname: process.env.VISION_HOST ?? "127.0.0.1", // 既定はローカルのみ。公開が必要なら VISION_HOST=0.0.0.0
   port: PORT,
   idleTimeout: 120,
   async fetch(req) {
