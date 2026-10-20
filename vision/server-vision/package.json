@@ -1,0 +1,6 @@
+{
+  "name": "typesafeai-jev-local",
+  "private": true,
+  "type": "module",
+  "scripts": { "start": "bun run index.ts" }
+}

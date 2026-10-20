@@ -1,0 +1,50 @@
+{
+  "name": "sst5_as_choice",
+  "type": "choice",
+  "language": "en",
+  "question": "Which level best describes the sentiment expressed in this movie review sentence?",
+  "options": [
+    "very negative",
+    "negative",
+    "neutral",
+    "positive",
+    "very positive"
+  ],
+  "ordinal": true,
+  "exploratory": true,
+  "derived_from": "sst5",
+  "presentation": "choice・レター A-E",
+  "gold_encoding": "index into options (0-based) = sst5 level - 1。ordinal=true: 選択肢は順序付き（off-by-one 等を算出）",
+  "note": "探索的（事前登録外）。score の数字ラベル(0..4)方式の弱さか、モデルの弱さかの切り分け用。gates・プール較正の対象外",
+  "source": "SetFit/sst5 test (Stanford Sentiment Treebank, Socher et al. 2013), random sample (natural distribution)",
+  "license": "SST: 研究用途（Stanford の SST 配布条件。HF 上は license 明記なし）",
+  "n": 200,
+  "n_calib": 40,
+  "n_test": 160,
+  "seed": 20261006,
+  "task_seed": 958916371,
+  "gold_dist": {
+    "all": {
+      "0": 17,
+      "1": 56,
+      "2": 41,
+      "3": 39,
+      "4": 47
+    },
+    "calib": {
+      "0": 4,
+      "1": 10,
+      "2": 12,
+      "3": 8,
+      "4": 6
+    },
+    "test": {
+      "0": 13,
+      "1": 46,
+      "2": 29,
+      "3": 31,
+      "4": 41
+    }
+  },
+  "majority_baseline_test_acc": 0.2875
+}

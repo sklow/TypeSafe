@@ -1,0 +1,36 @@
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Dependencies / envs
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Logs / caches
+*.log
+.cache/
+.pytest_cache/
+
+# Model weights and large downloads
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+*.onnx
+vision/hf-cache/
+
+# Nested third-party repo (own .git, venv)
+vision/glance-src/

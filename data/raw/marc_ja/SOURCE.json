@@ -1,0 +1,29 @@
+{
+ "name": "marc_ja",
+ "dataset": "yangwang825/marc-ja",
+ "config": "default",
+ "split": "validation",
+ "num_rows": 5654,
+ "features": [
+  {
+   "feature_idx": 0,
+   "name": "text",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 1,
+   "name": "label",
+   "type": {
+    "names": [
+     "positive",
+     "negative"
+    ],
+    "_type": "ClassLabel"
+   }
+  }
+ ],
+ "fetched_at": "2026-10-06T14:50:43.786Z"
+}

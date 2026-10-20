@@ -1,0 +1,51 @@
+{
+  "type": "score",
+  "language": "en",
+  "levels": 5,
+  "question": "Which level best describes the sentiment expressed in this movie review sentence?",
+  "level_labels": [
+    "very negative",
+    "negative",
+    "neutral",
+    "positive",
+    "very positive"
+  ],
+  "gold_encoding": "integer 1..5 (= SetFit/sst5 label + 1)",
+  "source": "SetFit/sst5 test (Stanford Sentiment Treebank, Socher et al. 2013), random sample (natural distribution)",
+  "license": "SST: 研究用途（Stanford の SST 配布条件。HF 上は license 明記なし）",
+  "name": "sst5_perm2",
+  "n": 200,
+  "n_calib": 40,
+  "n_test": 160,
+  "seed": 20261006,
+  "task_seed": 1618771598,
+  "gold_dist": {
+    "all": {
+      "1": 17,
+      "2": 56,
+      "3": 41,
+      "4": 39,
+      "5": 47
+    },
+    "calib": {
+      "1": 4,
+      "2": 10,
+      "3": 12,
+      "4": 8,
+      "5": 6
+    },
+    "test": {
+      "1": 13,
+      "2": 46,
+      "3": 29,
+      "4": 31,
+      "5": 41
+    }
+  },
+  "majority_baseline_test_acc": 0.2875,
+  "exploratory": true,
+  "derived_from": "sst5",
+  "harness_perm2": true,
+  "presentation": "score・数字 0..4、正順+逆順の平均（ハーネス側 2 回呼び出し）",
+  "note": "探索的（事前登録外）。criteria を正順と逆順で 2 回提示し、レベル順に戻して確率を算術平均（orders に各順序を保存＝対数平均・flip rate も算出可）。gates・プール較正の対象外。レイテンシは 2 回分の合計"
+}

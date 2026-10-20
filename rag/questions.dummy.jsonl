@@ -1,0 +1,5 @@
+{"id":"d1","split":"calib","type":"choice","question":"graphite 基盤上の吸着ポテンシャルの最も深い部分の深さはおよそどれくらいか。","options":["約 2 K","約 20 K","約 200 K","約 2000 K"],"gold":2,"evidence_quote":"その深さは 200 K 程度である"}
+{"id":"d2","split":"calib","type":"noul","question":"graphite は層内がファンデルワールス力で、層間が共有結合で結合している。","gold":false,"evidence_quote":"層内は共有結合で強く結びついているが、層間はファンデルワールス力で弱く結合している"}
+{"id":"d3","split":"test","type":"noul","question":"過去の測定から、He の吸着では少なくとも 7 層目まで単原子層が成長することがわかっている。","gold":true,"evidence_quote":"少なくとも 7 層目まで成長していくことがわかっている"}
+{"id":"d4","split":"test","type":"choice","question":"graphite の炭素原子はどのような構造に並んでいるか。","options":["面心立方構造","ハニカム構造","体心立方構造","らせん構造"],"gold":1,"evidence_quote":"面内で炭素原子がハニカム構造上の正六角形の頂点にならび"}
+{"id":"d5","split":"test","type":"noul","question":"Grafoil の platelet（結晶子）のサイズは約 10 nm である。","gold":true,"evidence_quote":"platelet(結晶子) のサイズが、約 10 nm と小さく"}

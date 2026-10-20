@@ -1,0 +1,46 @@
+{
+  "type": "score",
+  "language": "en",
+  "levels": 5,
+  "question": "Which level best describes the sentiment expressed in this movie review sentence?",
+  "level_labels": [
+    "very negative",
+    "negative",
+    "neutral",
+    "positive",
+    "very positive"
+  ],
+  "gold_encoding": "integer 1..5 (= SetFit/sst5 label + 1)",
+  "source": "SetFit/sst5 test (Stanford Sentiment Treebank, Socher et al. 2013), random sample (natural distribution)",
+  "license": "SST: 研究用途（Stanford の SST 配布条件。HF 上は license 明記なし）",
+  "name": "sst5",
+  "n": 200,
+  "n_calib": 40,
+  "n_test": 160,
+  "seed": 20261006,
+  "task_seed": 1618771598,
+  "gold_dist": {
+    "all": {
+      "1": 17,
+      "2": 56,
+      "3": 41,
+      "4": 39,
+      "5": 47
+    },
+    "calib": {
+      "1": 4,
+      "2": 10,
+      "3": 12,
+      "4": 8,
+      "5": 6
+    },
+    "test": {
+      "1": 13,
+      "2": 46,
+      "3": 29,
+      "4": 31,
+      "5": 41
+    }
+  },
+  "majority_baseline_test_acc": 0.2875
+}

@@ -1,0 +1,1130 @@
+{
+  "mlx2b-ja": {
+    "conds": {
+      "pair": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.5667,
+          "ece": 0.2916,
+          "auroc": 0.7758,
+          "cov_at_prec95": 0.2778,
+          "mean_conf": 0.8381,
+          "brier": 0.6358
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.5333,
+            "ece": 0.3253,
+            "auroc": 0.567,
+            "cov_at_prec95": 0.0333,
+            "mean_conf": 0.7895,
+            "brier": 0.663
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.3266,
+            "auroc": 0.6356,
+            "cov_at_prec95": 0.1667,
+            "mean_conf": 0.8266,
+            "brier": 0.7807
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6667,
+            "ece": 0.2527,
+            "auroc": 1.0,
+            "cov_at_prec95": 0.7,
+            "mean_conf": 0.8983,
+            "brier": 0.4636
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.7,
+          "ece": 0.1963,
+          "auroc": 0.6984,
+          "cov_at_prec95": 0.1,
+          "mean_conf": 0.8635,
+          "brier": 0.4451
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.1,
+            "ece": 0.7851,
+            "auroc": 0.0,
+            "cov_at_prec95": 0.0,
+            "mean_conf": 0.7889,
+            "brier": 1.2699
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.1386,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.8614,
+            "brier": 0.0535
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0597,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.9403,
+            "brier": 0.0119
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.3507,
+            "auroc": 0.7944,
+            "cov_at_prec95": 0.2333,
+            "mean_conf": 0.8254,
+            "brier": 0.7311
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 0,
+          "rate": 0.0,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 867.0467,
+        "latency_ms_p90_item": 1070.0518,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "pair-swap": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.5556,
+          "ece": 0.2648,
+          "auroc": 0.821,
+          "cov_at_prec95": 0.3111,
+          "mean_conf": 0.8204,
+          "brier": 0.6065
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.2897,
+            "auroc": 0.6667,
+            "cov_at_prec95": 0.0333,
+            "mean_conf": 0.7662,
+            "brier": 0.631
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.3356,
+            "auroc": 0.6356,
+            "cov_at_prec95": 0.1333,
+            "mean_conf": 0.8021,
+            "brier": 0.735
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6667,
+            "ece": 0.2578,
+            "auroc": 1.0,
+            "cov_at_prec95": 0.7,
+            "mean_conf": 0.8929,
+            "brier": 0.4536
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.7,
+          "ece": 0.1558,
+          "auroc": 0.7354,
+          "cov_at_prec95": 0.1333,
+          "mean_conf": 0.8558,
+          "brier": 0.4268
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.1,
+            "ece": 0.6688,
+            "auroc": 0.0,
+            "cov_at_prec95": 0.0,
+            "mean_conf": 0.7688,
+            "brier": 1.2126
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.1552,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.8448,
+            "brier": 0.0627
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0462,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.9538,
+            "brier": 0.0052
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.4833,
+            "ece": 0.3193,
+            "auroc": 0.8454,
+            "cov_at_prec95": 0.2333,
+            "mean_conf": 0.8027,
+            "brier": 0.6964
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 0,
+          "rate": 0.0,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 853.1553,
+        "latency_ms_p90_item": 1154.3425,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "single": {
+        "all": {
+          "n": 25,
+          "n_err": 0,
+          "acc": 0.52,
+          "ece": 0.2086,
+          "auroc": 0.6923,
+          "cov_at_prec95": 0.16,
+          "mean_conf": 0.6999,
+          "brier": 0.595
+        },
+        "by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "same_question": null,
+        "same_question_by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "by_type": {
+          "choice": {
+            "n": 14,
+            "n_err": 0,
+            "acc": 0.6429,
+            "ece": 0.1147,
+            "auroc": 0.8667,
+            "cov_at_prec95": 0.4286,
+            "mean_conf": 0.6906,
+            "brier": 0.3954
+          },
+          "noul": {
+            "n": 11,
+            "n_err": 0,
+            "acc": 0.3636,
+            "ece": 0.4192,
+            "auroc": 0.3929,
+            "cov_at_prec95": 0.0,
+            "mean_conf": 0.7116,
+            "brier": 0.8491
+          }
+        },
+        "opposite_judged_same": {
+          "n_opposite": 0,
+          "n_wrong": 0,
+          "rate": null,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 621.3419,
+        "latency_ms_p90_item": 885.8594,
+        "n_items": 25,
+        "n_q": 25,
+        "n_err": 0
+      }
+    },
+    "api": "http://127.0.0.1:8077",
+    "updated": "2026-10-07T08:02:23"
+  },
+  "mlx2b-en": {
+    "conds": {
+      "pair": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.6111,
+          "ece": 0.1457,
+          "auroc": 0.7288,
+          "cov_at_prec95": 0.1444,
+          "mean_conf": 0.7568,
+          "brier": 0.5077
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.7667,
+            "ece": 0.1821,
+            "auroc": 0.5839,
+            "cov_at_prec95": 0.0333,
+            "mean_conf": 0.74,
+            "brier": 0.3911
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.3333,
+            "ece": 0.4325,
+            "auroc": 0.56,
+            "cov_at_prec95": 0.0667,
+            "mean_conf": 0.7407,
+            "brier": 0.8629
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.7333,
+            "ece": 0.1532,
+            "auroc": 0.9432,
+            "cov_at_prec95": 0.7,
+            "mean_conf": 0.7898,
+            "brier": 0.2693
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.7,
+          "ece": 0.2153,
+          "auroc": 0.9048,
+          "cov_at_prec95": 0.5,
+          "mean_conf": 0.736,
+          "brier": 0.3076
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.7,
+            "ece": 0.1588,
+            "auroc": 0.8571,
+            "cov_at_prec95": 0.4,
+            "mean_conf": 0.6645,
+            "brier": 0.3579
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.4,
+            "ece": 0.429,
+            "auroc": 0.8333,
+            "cov_at_prec95": 0.2,
+            "mean_conf": 0.6618,
+            "brier": 0.5262
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.1184,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.8816,
+            "brier": 0.0386
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.5667,
+            "ece": 0.2006,
+            "auroc": 0.7172,
+            "cov_at_prec95": 0.2167,
+            "mean_conf": 0.7673,
+            "brier": 0.6078
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 6,
+          "rate": 0.6,
+          "mean_conf_when_wrong": 0.6159
+        },
+        "latency_ms_p50_item": 819.4895,
+        "latency_ms_p90_item": 1768.6846,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "pair-swap": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.6889,
+          "ece": 0.1039,
+          "auroc": 0.7108,
+          "cov_at_prec95": 0.1333,
+          "mean_conf": 0.7117,
+          "brier": 0.4209
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.7,
+            "ece": 0.183,
+            "auroc": 0.5608,
+            "cov_at_prec95": 0.0333,
+            "mean_conf": 0.6727,
+            "brier": 0.4581
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.4,
+            "ece": 0.2718,
+            "auroc": 0.8009,
+            "cov_at_prec95": 0.1667,
+            "mean_conf": 0.6709,
+            "brier": 0.6523
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.9667,
+            "ece": 0.2006,
+            "auroc": 1.0,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.7915,
+            "brier": 0.1522
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.7,
+          "ece": 0.1321,
+          "auroc": 0.8783,
+          "cov_at_prec95": 0.4667,
+          "mean_conf": 0.7221,
+          "brier": 0.3068
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.1855,
+            "auroc": 0.76,
+            "cov_at_prec95": 0.2,
+            "mean_conf": 0.6335,
+            "brier": 0.4837
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.6,
+            "ece": 0.1071,
+            "auroc": 0.8333,
+            "cov_at_prec95": 0.5,
+            "mean_conf": 0.6365,
+            "brier": 0.411
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.1037,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.8963,
+            "brier": 0.0256
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.6833,
+            "ece": 0.1651,
+            "auroc": 0.6598,
+            "cov_at_prec95": 0.2,
+            "mean_conf": 0.7065,
+            "brier": 0.4779
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 4,
+          "rate": 0.4,
+          "mean_conf_when_wrong": 0.5773
+        },
+        "latency_ms_p50_item": 794.0248,
+        "latency_ms_p90_item": 1009.261,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "single": {
+        "all": {
+          "n": 25,
+          "n_err": 0,
+          "acc": 0.6,
+          "ece": 0.2029,
+          "auroc": 0.8733,
+          "cov_at_prec95": 0.36,
+          "mean_conf": 0.7053,
+          "brier": 0.3924
+        },
+        "by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "same_question": null,
+        "same_question_by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "by_type": {
+          "choice": {
+            "n": 14,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.2733,
+            "auroc": 0.8571,
+            "cov_at_prec95": 0.4286,
+            "mean_conf": 0.6634,
+            "brier": 0.4284
+          },
+          "noul": {
+            "n": 11,
+            "n_err": 0,
+            "acc": 0.7273,
+            "ece": 0.2394,
+            "auroc": 0.75,
+            "cov_at_prec95": 0.3636,
+            "mean_conf": 0.7586,
+            "brier": 0.3466
+          }
+        },
+        "opposite_judged_same": {
+          "n_opposite": 0,
+          "n_wrong": 0,
+          "rate": null,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 1137.8415,
+        "latency_ms_p90_item": 3643.4475,
+        "n_items": 25,
+        "n_q": 25,
+        "n_err": 0
+      }
+    },
+    "api": "http://127.0.0.1:8077",
+    "updated": "2026-10-07T08:03:36"
+  },
+  "torch4b-ja": {
+    "conds": {
+      "pair": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.7111,
+          "ece": 0.188,
+          "auroc": 0.7698,
+          "cov_at_prec95": 0.3778,
+          "mean_conf": 0.8991,
+          "brier": 0.4387
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6333,
+            "ece": 0.3193,
+            "auroc": 0.7081,
+            "cov_at_prec95": 0.3,
+            "mean_conf": 0.8848,
+            "brier": 0.6139
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6333,
+            "ece": 0.2996,
+            "auroc": 0.5742,
+            "cov_at_prec95": 0.0667,
+            "mean_conf": 0.8886,
+            "brier": 0.6044
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.8667,
+            "ece": 0.0963,
+            "auroc": 1.0,
+            "cov_at_prec95": 0.9,
+            "mean_conf": 0.924,
+            "brier": 0.0977
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.7333,
+          "ece": 0.2594,
+          "auroc": 0.8011,
+          "cov_at_prec95": 0.4,
+          "mean_conf": 0.9635,
+          "brier": 0.493
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.3,
+            "ece": 0.6977,
+            "auroc": 0.3333,
+            "cov_at_prec95": 0.0,
+            "mean_conf": 0.9101,
+            "brier": 1.2951
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.9,
+            "ece": 0.0805,
+            "auroc": 0.8889,
+            "cov_at_prec95": 0.8,
+            "mean_conf": 0.9805,
+            "brier": 0.1839
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0001,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.9999,
+            "brier": 0.0
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.7,
+            "ece": 0.182,
+            "auroc": 0.7778,
+            "cov_at_prec95": 0.3667,
+            "mean_conf": 0.8669,
+            "brier": 0.4115
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 1,
+          "rate": 0.1,
+          "mean_conf_when_wrong": 0.9558
+        },
+        "latency_ms_p50_item": 1385.5784,
+        "latency_ms_p90_item": 1545.7208,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "pair-swap": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.7222,
+          "ece": 0.1876,
+          "auroc": 0.7748,
+          "cov_at_prec95": 0.4,
+          "mean_conf": 0.9063,
+          "brier": 0.4433
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.7,
+            "ece": 0.2058,
+            "auroc": 0.7831,
+            "cov_at_prec95": 0.3333,
+            "mean_conf": 0.9058,
+            "brier": 0.4784
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.5667,
+            "ece": 0.3698,
+            "auroc": 0.6063,
+            "cov_at_prec95": 0.1,
+            "mean_conf": 0.8872,
+            "brier": 0.7376
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.9,
+            "ece": 0.0613,
+            "auroc": 0.9506,
+            "cov_at_prec95": 0.9333,
+            "mean_conf": 0.9258,
+            "brier": 0.114
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.8333,
+          "ece": 0.1244,
+          "auroc": 0.704,
+          "cov_at_prec95": 0.4,
+          "mean_conf": 0.8944,
+          "brier": 0.2919
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.5,
+            "ece": 0.3444,
+            "auroc": 0.52,
+            "cov_at_prec95": 0.1,
+            "mean_conf": 0.8444,
+            "brier": 0.7688
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.1611,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.8389,
+            "brier": 0.1069
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0003,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.9997,
+            "brier": 0.0
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.6667,
+            "ece": 0.2456,
+            "auroc": 0.8125,
+            "cov_at_prec95": 0.4167,
+            "mean_conf": 0.9122,
+            "brier": 0.519
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 0,
+          "rate": 0.0,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 1379.5607,
+        "latency_ms_p90_item": 1430.4627,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "single": {
+        "all": {
+          "n": 25,
+          "n_err": 0,
+          "acc": 0.6,
+          "ece": 0.3078,
+          "auroc": 0.8533,
+          "cov_at_prec95": 0.48,
+          "mean_conf": 0.8888,
+          "brier": 0.6122
+        },
+        "by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "same_question": null,
+        "same_question_by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "by_type": {
+          "choice": {
+            "n": 14,
+            "n_err": 0,
+            "acc": 0.6429,
+            "ece": 0.2998,
+            "auroc": 0.9111,
+            "cov_at_prec95": 0.5,
+            "mean_conf": 0.8862,
+            "brier": 0.5139
+          },
+          "noul": {
+            "n": 11,
+            "n_err": 0,
+            "acc": 0.5455,
+            "ece": 0.3467,
+            "auroc": 0.8333,
+            "cov_at_prec95": 0.4545,
+            "mean_conf": 0.8922,
+            "brier": 0.7374
+          }
+        },
+        "opposite_judged_same": {
+          "n_opposite": 0,
+          "n_wrong": 0,
+          "rate": null,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 503.2838,
+        "latency_ms_p90_item": 1199.068,
+        "n_items": 25,
+        "n_q": 25,
+        "n_err": 0
+      }
+    },
+    "api": "http://127.0.0.1:8078",
+    "updated": "2026-10-07T08:50:29"
+  },
+  "torch4b-en": {
+    "conds": {
+      "pair": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.7667,
+          "ece": 0.1822,
+          "auroc": 0.8054,
+          "cov_at_prec95": 0.5222,
+          "mean_conf": 0.9488,
+          "brier": 0.3933
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6333,
+            "ece": 0.2937,
+            "auroc": 0.7368,
+            "cov_at_prec95": 0.0,
+            "mean_conf": 0.927,
+            "brier": 0.6048
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6667,
+            "ece": 0.2721,
+            "auroc": 0.625,
+            "cov_at_prec95": 0.1,
+            "mean_conf": 0.9196,
+            "brier": 0.575
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0001,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.9999,
+            "brier": 0.0
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.7667,
+          "ece": 0.1966,
+          "auroc": 0.7826,
+          "cov_at_prec95": 0.4667,
+          "mean_conf": 0.9331,
+          "brier": 0.3965
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.4,
+            "ece": 0.5789,
+            "auroc": 0.4167,
+            "cov_at_prec95": 0.1,
+            "mean_conf": 0.8883,
+            "brier": 1.0755
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.9,
+            "ece": 0.1255,
+            "auroc": 1.0,
+            "cov_at_prec95": 0.9,
+            "mean_conf": 0.9109,
+            "brier": 0.1141
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 1.0,
+            "brier": 0.0
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.7667,
+            "ece": 0.1901,
+            "auroc": 0.816,
+            "cov_at_prec95": 0.3667,
+            "mean_conf": 0.9567,
+            "brier": 0.3916
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 1,
+          "rate": 0.1,
+          "mean_conf_when_wrong": 0.6821
+        },
+        "latency_ms_p50_item": 1260.7901,
+        "latency_ms_p90_item": 1294.9025,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "pair-swap": {
+        "all": {
+          "n": 90,
+          "n_err": 0,
+          "acc": 0.7778,
+          "ece": 0.1659,
+          "auroc": 0.8089,
+          "cov_at_prec95": 0.5444,
+          "mean_conf": 0.9437,
+          "brier": 0.3613
+        },
+        "by_relation": {
+          "same": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6667,
+            "ece": 0.252,
+            "auroc": 0.84,
+            "cov_at_prec95": 0.0,
+            "mean_conf": 0.9187,
+            "brier": 0.4972
+          },
+          "opposite": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 0.6667,
+            "ece": 0.3093,
+            "auroc": 0.5,
+            "cov_at_prec95": 0.1333,
+            "mean_conf": 0.9123,
+            "brier": 0.5867
+          },
+          "unrelated": {
+            "n": 30,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 1.0,
+            "brier": 0.0
+          }
+        },
+        "same_question": {
+          "n": 30,
+          "n_err": 0,
+          "acc": 0.8,
+          "ece": 0.1165,
+          "auroc": 0.8125,
+          "cov_at_prec95": 0.4,
+          "mean_conf": 0.8908,
+          "brier": 0.2895
+        },
+        "same_question_by_relation": {
+          "same": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 0.4,
+            "ece": 0.4179,
+            "auroc": 0.7083,
+            "cov_at_prec95": 0.1,
+            "mean_conf": 0.8179,
+            "brier": 0.8056
+          },
+          "opposite": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.1454,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 0.8546,
+            "brier": 0.0629
+          },
+          "unrelated": {
+            "n": 10,
+            "n_err": 0,
+            "acc": 1.0,
+            "ece": 0.0,
+            "auroc": null,
+            "cov_at_prec95": 1.0,
+            "mean_conf": 1.0,
+            "brier": 0.0
+          }
+        },
+        "by_type": {
+          "choice": {
+            "n": 60,
+            "n_err": 0,
+            "acc": 0.7667,
+            "ece": 0.207,
+            "auroc": 0.8478,
+            "cov_at_prec95": 0.5167,
+            "mean_conf": 0.9701,
+            "brier": 0.3972
+          },
+          "noul": null
+        },
+        "opposite_judged_same": {
+          "n_opposite": 10,
+          "n_wrong": 0,
+          "rate": 0.0,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 1249.0273,
+        "latency_ms_p90_item": 1301.8015,
+        "n_items": 30,
+        "n_q": 90,
+        "n_err": 0
+      },
+      "single": {
+        "all": {
+          "n": 25,
+          "n_err": 0,
+          "acc": 0.76,
+          "ece": 0.1446,
+          "auroc": 0.7105,
+          "cov_at_prec95": 0.32,
+          "mean_conf": 0.9046,
+          "brier": 0.4341
+        },
+        "by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "same_question": null,
+        "same_question_by_relation": {
+          "same": null,
+          "opposite": null,
+          "unrelated": null
+        },
+        "by_type": {
+          "choice": {
+            "n": 14,
+            "n_err": 0,
+            "acc": 0.6429,
+            "ece": 0.2747,
+            "auroc": 0.7333,
+            "cov_at_prec95": 0.3571,
+            "mean_conf": 0.8943,
+            "brier": 0.6546
+          },
+          "noul": {
+            "n": 11,
+            "n_err": 0,
+            "acc": 0.9091,
+            "ece": 0.0686,
+            "auroc": 0.8,
+            "cov_at_prec95": 0.7273,
+            "mean_conf": 0.9177,
+            "brier": 0.1534
+          }
+        },
+        "opposite_judged_same": {
+          "n_opposite": 0,
+          "n_wrong": 0,
+          "rate": null,
+          "mean_conf_when_wrong": null
+        },
+        "latency_ms_p50_item": 219.7136,
+        "latency_ms_p90_item": 971.2728,
+        "n_items": 25,
+        "n_q": 25,
+        "n_err": 0
+      }
+    },
+    "api": "http://127.0.0.1:8078",
+    "updated": "2026-10-07T08:52:10"
+  }
+}

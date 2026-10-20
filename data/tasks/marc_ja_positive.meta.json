@@ -1,0 +1,29 @@
+{
+  "type": "noul",
+  "language": "ja",
+  "question": "このレビューは、商品に対して肯定的（好意的）な内容ですか？",
+  "gold_encoding": "boolean (true = positive)",
+  "source": "yangwang825/marc-ja validation (JGLUE MARC-ja = Multilingual Amazon Reviews Corpus の ja を positive/negative 化)。positive/negative を 100/100 で層化サンプリング（元の分布は positive 85%）",
+  "license": "JGLUE ラベル: CC BY-SA 4.0 / 元レビューは Amazon の MARC 利用規約（研究目的のみ。再配布・商用不可）。data/ をリポジトリ外へ配布しないこと",
+  "name": "marc_ja_positive",
+  "n": 200,
+  "n_calib": 40,
+  "n_test": 160,
+  "seed": 20261006,
+  "task_seed": 1816679832,
+  "gold_dist": {
+    "all": {
+      "true": 100,
+      "false": 100
+    },
+    "calib": {
+      "true": 22,
+      "false": 18
+    },
+    "test": {
+      "true": 78,
+      "false": 82
+    }
+  },
+  "majority_baseline_test_acc": 0.5125
+}

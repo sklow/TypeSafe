@@ -1,0 +1,72 @@
+{
+ "per_cond": {
+  "9b-rag": {
+   "n": 16,
+   "n_sent": 81
+  },
+  "4b-rag": {
+   "n": 16,
+   "n_sent": 83
+  },
+  "claude-rag": {
+   "n": 16,
+   "n_sent": 80
+  },
+  "9b-none": {
+   "n": 16,
+   "n_sent": 76
+  }
+ },
+ "sentence": {
+  "9b-rag|(1) incorrect": {
+   "n": 81,
+   "n_bad": 6,
+   "auroc": 0.7466666666666667
+  },
+  "9b-rag|(2) incorrect+unsupported": {
+   "n": 81,
+   "n_bad": 16,
+   "auroc": 0.7990384615384616
+  },
+  "4b-rag|(1) incorrect": {
+   "n": 83,
+   "n_bad": 9,
+   "auroc": 0.7972972972972973
+  },
+  "4b-rag|(2) incorrect+unsupported": {
+   "n": 83,
+   "n_bad": 22,
+   "auroc": 0.793591654247392
+  },
+  "claude-rag|(1) incorrect": {
+   "n": 80,
+   "n_bad": 1,
+   "auroc": 0.5949367088607594
+  },
+  "claude-rag|(2) incorrect+unsupported": {
+   "n": 80,
+   "n_bad": 3,
+   "auroc": 0.8398268398268398
+  },
+  "9b-none|(1) incorrect": {
+   "n": 76,
+   "n_bad": 42,
+   "auroc": 0.6848739495798319
+  },
+  "9b-none|(2) incorrect+unsupported": {
+   "n": 76,
+   "n_bad": 68,
+   "auroc": 0.7941176470588235
+  },
+  "(全条件)|(1) incorrect": {
+   "n": 320,
+   "n_bad": 58,
+   "auroc": 0.8406817583574625
+  },
+  "(全条件)|(2) incorrect+unsupported": {
+   "n": 320,
+   "n_bad": 109,
+   "auroc": 0.8685160224357581
+  }
+ }
+}

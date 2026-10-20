@@ -1,0 +1,3 @@
+{"id":"o1","split":"calib","question_open":"graphite 基盤上の吸着ポテンシャルの最も深い部分の深さはおよそどれくらいか。","gold_answer":"約 200 K","acceptable":["200 K"],"evidence_quote":"その深さは 200 K 程度である"}
+{"id":"o2","split":"test","question_open":"graphite の炭素原子はどのような構造に並んでいるか。","gold_answer":"ハニカム構造","acceptable":["ハニカム"],"evidence_quote":"面内で炭素原子がハニカム構造上の正六角形の頂点にならび"}
+{"id":"o3","split":"test","question_open":"この論文の著者の好きな食べ物は何か。","gold_answer":"資料からは不明","acceptable":[],"evidence_quote":"ありえない文"}

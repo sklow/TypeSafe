@@ -1,0 +1,51 @@
+{
+  "model": "qwen3.5-0.8b",
+  "runs": 20,
+  "warmups": 3,
+  "passage_chars": 631,
+  "three_questions_same_state_warm": {
+    "client_ms": {
+      "n": 20,
+      "p50": 88.30127049999999,
+      "p90": 88.50301660000018,
+      "mean": 88.24821245000001
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 88,
+      "p90": 88,
+      "mean": 88
+    },
+    "errors": 0
+  },
+  "three_questions_vary_state_cold": {
+    "client_ms": {
+      "n": 20,
+      "p50": 133.6154789999996,
+      "p90": 171.70563690000014,
+      "mean": 148.1696853499999
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 133,
+      "p90": 171.60000000000008,
+      "mean": 148
+    },
+    "errors": 0
+  },
+  "noul_only_same_state_warm": {
+    "client_ms": {
+      "n": 20,
+      "p50": 9.429250000000593,
+      "p90": 9.468104200000107,
+      "mean": 9.428610450000132
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 9,
+      "p90": 9,
+      "mean": 9
+    },
+    "errors": 0
+  }
+}

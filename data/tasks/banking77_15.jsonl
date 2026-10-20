@@ -1,0 +1,200 @@
+{"id":"banking77_15-000","split":"calib","state":"My money transfer has not arrived.","gold":12,"src_idx":840}
+{"id":"banking77_15-001","split":"calib","state":"Why hasn't my top-up been completed?","gold":10,"src_idx":659}
+{"id":"banking77_15-002","split":"calib","state":"My card is still pending, I've been waiting a while.","gold":5,"src_idx":1628}
+{"id":"banking77_15-003","split":"calib","state":"I am unhappy with my purchase, how do I cancel the order?","gold":13,"src_idx":1695}
+{"id":"banking77_15-004","split":"calib","state":"Why are you declining my payment? Everything was fine.","gold":6,"src_idx":1816}
+{"id":"banking77_15-005","split":"calib","state":"Your top-up function isn't working, it still says pending even though I know my card works.","gold":10,"src_idx":663}
+{"id":"banking77_15-006","split":"calib","state":"What do you base your exchange rates on?","gold":7,"src_idx":103}
+{"id":"banking77_15-007","split":"calib","state":"Help!  I can't find my card.","gold":3,"src_idx":456}
+{"id":"banking77_15-008","split":"calib","state":"I would like to revert a transaction I did this morning","gold":11,"src_idx":686}
+{"id":"banking77_15-009","split":"calib","state":"I live in the US, how long will it take for delivery?","gold":1,"src_idx":287}
+{"id":"banking77_15-010","split":"calib","state":"I need a refund?","gold":13,"src_idx":1694}
+{"id":"banking77_15-011","split":"calib","state":"The exchange rate would be?","gold":7,"src_idx":106}
+{"id":"banking77_15-012","split":"calib","state":"Can i cancel a charge?","gold":11,"src_idx":680}
+{"id":"banking77_15-013","split":"calib","state":"Which cash machines will allow me to change my PIN?","gold":14,"src_idx":2145}
+{"id":"banking77_15-014","split":"calib","state":"Where do you get your exchange rates from?","gold":7,"src_idx":99}
+{"id":"banking77_15-015","split":"calib","state":"How long until my friend receives my transaction?","gold":12,"src_idx":874}
+{"id":"banking77_15-016","split":"calib","state":"I need a new PIN.","gold":14,"src_idx":2150}
+{"id":"banking77_15-017","split":"calib","state":"My top up didn't work.","gold":9,"src_idx":2647}
+{"id":"banking77_15-018","split":"calib","state":"what is the exchange rate?","gold":7,"src_idx":109}
+{"id":"banking77_15-019","split":"calib","state":"Help! Someone stole my card!","gold":3,"src_idx":447}
+{"id":"banking77_15-020","split":"calib","state":"Why is a payment showing up on my card as pending?","gold":5,"src_idx":1617}
+{"id":"banking77_15-021","split":"calib","state":"I'm having a problem with a money transfer.  I sent some money to a friend a couple of hours ago, and they haven't received it yet.  Why hasn't it gotten to them? How long do transfers need to go through?","gold":12,"src_idx":860}
+{"id":"banking77_15-022","split":"calib","state":"can I choose a date for delivery?","gold":1,"src_idx":317}
+{"id":"banking77_15-023","split":"calib","state":"My new pin needs to be set.","gold":14,"src_idx":2133}
+{"id":"banking77_15-024","split":"calib","state":"I would like a refund on one of your products that has been sold to me","gold":13,"src_idx":1704}
+{"id":"banking77_15-025","split":"calib","state":"Can I get my card expedited?","gold":1,"src_idx":308}
+{"id":"banking77_15-026","split":"calib","state":"I had a payment that I made and it's been some amount of time and would like to know when it's suppose to go though.","gold":5,"src_idx":1632}
+{"id":"banking77_15-027","split":"calib","state":"I would like to get help from someone with activating my card.","gold":2,"src_idx":2866}
+{"id":"banking77_15-028","split":"calib","state":"I made a transaction but did it to the wrong account.","gold":11,"src_idx":682}
+{"id":"banking77_15-029","split":"calib","state":"How can I activate my card>","gold":2,"src_idx":2862}
+{"id":"banking77_15-030","split":"calib","state":"Can I cancel a transfer","gold":11,"src_idx":694}
+{"id":"banking77_15-031","split":"calib","state":"Can you look at my account ans see why my card was declined","gold":6,"src_idx":1805}
+{"id":"banking77_15-032","split":"calib","state":"What is my foreign exchange rate?","gold":7,"src_idx":117}
+{"id":"banking77_15-033","split":"calib","state":"Is there tracking info available?","gold":0,"src_idx":37}
+{"id":"banking77_15-034","split":"calib","state":"How long does shipping take to get to a US destination?","gold":1,"src_idx":307}
+{"id":"banking77_15-035","split":"calib","state":"The transfer I just made needs to be cancelled right now. It was my mistake. Please help me cancel it before it goes through!","gold":11,"src_idx":705}
+{"id":"banking77_15-036","split":"calib","state":"I finally got my new card and was very excited to use it today. However, my payment kept declining. What is happening?","gold":6,"src_idx":1830}
+{"id":"banking77_15-037","split":"calib","state":"Is there any way to cancel a transfer?","gold":11,"src_idx":689}
+{"id":"banking77_15-038","split":"calib","state":"whats the exchange charge","gold":8,"src_idx":2765}
+{"id":"banking77_15-039","split":"calib","state":"I have been waiting longer than expected for my bank card, could you provide information on when it will arrive?","gold":0,"src_idx":15}
+{"id":"banking77_15-040","split":"test","state":"I need to activate my card can you do that now?","gold":2,"src_idx":2837}
+{"id":"banking77_15-041","split":"test","state":"Can someone assist me by explaining why my card is not working?","gold":4,"src_idx":371}
+{"id":"banking77_15-042","split":"test","state":"When will I get my card?","gold":0,"src_idx":5}
+{"id":"banking77_15-043","split":"test","state":"Why was a transaction on my card declined?","gold":6,"src_idx":1807}
+{"id":"banking77_15-044","split":"test","state":"My card stopped working","gold":4,"src_idx":383}
+{"id":"banking77_15-045","split":"test","state":"Do you know why my card payment did not work?","gold":6,"src_idx":1814}
+{"id":"banking77_15-046","split":"test","state":"The new card that was just sent to me was declined multiple times yesterday when I tried to use it at a restaurant to pay for my dinner.  I am really disappointed  and embarrassed that my card was denied when I tried to use it to pay for my friend's birthday dinner.","gold":6,"src_idx":1798}
+{"id":"banking77_15-047","split":"test","state":"Heyy I tried to top up with my card today but it failed! I just got the couple days before but it has worked last time. What's going on, can you double check please?","gold":9,"src_idx":2637}
+{"id":"banking77_15-048","split":"test","state":"My card declined","gold":6,"src_idx":1804}
+{"id":"banking77_15-049","split":"test","state":"I need help with a lost card","gold":3,"src_idx":458}
+{"id":"banking77_15-050","split":"test","state":"What are the steps to activating a new card?","gold":2,"src_idx":2870}
+{"id":"banking77_15-051","split":"test","state":"I've tried my card a bunch of times and it never worked.","gold":4,"src_idx":360}
+{"id":"banking77_15-052","split":"test","state":"What is the tracking number for my card that was mailed?","gold":0,"src_idx":25}
+{"id":"banking77_15-053","split":"test","state":"I  do not see a top-up processed.","gold":10,"src_idx":648}
+{"id":"banking77_15-054","split":"test","state":"I am in Austria right now. I need to change my PIN ASAP, so can I still do this from here?","gold":14,"src_idx":2146}
+{"id":"banking77_15-055","split":"test","state":"I'm really stuck. I don't know why but my card payment has not gone through.","gold":6,"src_idx":1812}
+{"id":"banking77_15-056","split":"test","state":"How long should my new card take to arrive?","gold":0,"src_idx":22}
+{"id":"banking77_15-057","split":"test","state":"Hello- It is urgent I get a refund on this product. The merchant has not been helpful, what can I do now to get this resolved ASAP?","gold":13,"src_idx":1677}
+{"id":"banking77_15-058","split":"test","state":"Please stop my purchase.","gold":13,"src_idx":1688}
+{"id":"banking77_15-059","split":"test","state":"I am seeing pending from the card payment I made.","gold":5,"src_idx":1608}
+{"id":"banking77_15-060","split":"test","state":"Does it cost to exchange currencies with this card?","gold":8,"src_idx":2780}
+{"id":"banking77_15-061","split":"test","state":"I did not get my card yet, is it lost?","gold":0,"src_idx":20}
+{"id":"banking77_15-062","split":"test","state":"what are exchange rates based on","gold":7,"src_idx":89}
+{"id":"banking77_15-063","split":"test","state":"What is the cost for an exchange fee?","gold":8,"src_idx":2790}
+{"id":"banking77_15-064","split":"test","state":"Would like to use my card and need to activate it first.  Can you help me do this?","gold":2,"src_idx":2850}
+{"id":"banking77_15-065","split":"test","state":"What is the base amount for cross-currency exchanges?","gold":8,"src_idx":2760}
+{"id":"banking77_15-066","split":"test","state":"How do I report my card stolen?","gold":3,"src_idx":450}
+{"id":"banking77_15-067","split":"test","state":"I bought some things this morning but the payment shows that it is pending","gold":5,"src_idx":1630}
+{"id":"banking77_15-068","split":"test","state":"I would like to change my PIN but I am not currently in the country.","gold":14,"src_idx":2122}
+{"id":"banking77_15-069","split":"test","state":"What is the difference between standard and express delivery?","gold":1,"src_idx":293}
+{"id":"banking77_15-070","split":"test","state":"I need you to cancel a transfer that I made.  It is the wrong account number and the app won't let me stop the transaction.  Please stop it!","gold":11,"src_idx":684}
+{"id":"banking77_15-071","split":"test","state":"How do I change my PIN?","gold":14,"src_idx":2140}
+{"id":"banking77_15-072","split":"test","state":"Is there a fee to exchange foreign money?","gold":8,"src_idx":2767}
+{"id":"banking77_15-073","split":"test","state":"How fast can you deliver?","gold":1,"src_idx":300}
+{"id":"banking77_15-074","split":"test","state":"I need to make an immediate cancellation related to a transfer. This was a mistake. Please assist quickly so this does not actually go through.","gold":11,"src_idx":710}
+{"id":"banking77_15-075","split":"test","state":"can you check why I wasn't able to top up?","gold":9,"src_idx":2660}
+{"id":"banking77_15-076","split":"test","state":"I desperately need to change my PIN, but I'm overseas on vacation right now. How can I do this?","gold":14,"src_idx":2125}
+{"id":"banking77_15-077","split":"test","state":"Send my card as soon as you are able to.","gold":1,"src_idx":305}
+{"id":"banking77_15-078","split":"test","state":"I ordered my card 2 weeks ago and it still isn't here? What do I do?","gold":0,"src_idx":23}
+{"id":"banking77_15-079","split":"test","state":"I attempted to top up but the app denied it.","gold":9,"src_idx":2643}
+{"id":"banking77_15-080","split":"test","state":"Could it be that I deactivated my card, its not working?","gold":4,"src_idx":399}
+{"id":"banking77_15-081","split":"test","state":"I accidentally made a transaction to the wrong account.","gold":11,"src_idx":690}
+{"id":"banking77_15-082","split":"test","state":"Hi I'm a new customer and tried topping up for the first time today, seems it's not working, the thing shows up as pending since half an hour already! Please fix it!","gold":10,"src_idx":664}
+{"id":"banking77_15-083","split":"test","state":"How can i check if my card is working?","gold":4,"src_idx":396}
+{"id":"banking77_15-084","split":"test","state":"Assist me please with card activation.","gold":2,"src_idx":2857}
+{"id":"banking77_15-085","split":"test","state":"I bought something but now I would like a refund. How do I do that?","gold":13,"src_idx":1696}
+{"id":"banking77_15-086","split":"test","state":"Can you please make my top up go through as soon as possible. I really need the money and it has been pending for an hour already.","gold":10,"src_idx":653}
+{"id":"banking77_15-087","split":"test","state":"Ordered awhile back, what is the ETA in the US?","gold":1,"src_idx":301}
+{"id":"banking77_15-088","split":"test","state":"What would lead to my top up still pending?","gold":10,"src_idx":641}
+{"id":"banking77_15-089","split":"test","state":"Is there something wrong with your website? I tried topping up my account and it's been close to two hours now and it's still at \"pending\" for some reason. I just joined with you guys and this is the first attempt at this, so maybe I'm wrong, but shouldn't this be instant?","gold":10,"src_idx":657}
+{"id":"banking77_15-090","split":"test","state":"How long will it take to get to me?","gold":1,"src_idx":283}
+{"id":"banking77_15-091","split":"test","state":"Why did it decline my payment?","gold":6,"src_idx":1803}
+{"id":"banking77_15-092","split":"test","state":"My bags were stolen. I need a new card but need to cancel the stolen one.","gold":3,"src_idx":464}
+{"id":"banking77_15-093","split":"test","state":"I ordered something ages ago online but it's simply not arriving. I've got enough! Give me back my money, I'm not paying these people.","gold":13,"src_idx":1692}
+{"id":"banking77_15-094","split":"test","state":"I have a pending payment in my account that I paid a while back ago and it still hasnt gone through. Why would it show pending for so long?","gold":5,"src_idx":1635}
+{"id":"banking77_15-095","split":"test","state":"new customer and filling gas today, it's not working, the thing shows pending half an hour!","gold":10,"src_idx":639}
+{"id":"banking77_15-096","split":"test","state":"Do you have a list of exchange rates?","gold":7,"src_idx":95}
+{"id":"banking77_15-097","split":"test","state":"Does delivery to the US take long?","gold":1,"src_idx":290}
+{"id":"banking77_15-098","split":"test","state":"How much do I have to pay for the exchange fee?","gold":8,"src_idx":2774}
+{"id":"banking77_15-099","split":"test","state":"I transferred some money but the receiver can't pick it up for some reason.","gold":12,"src_idx":861}
+{"id":"banking77_15-100","split":"test","state":"How long will it take to activate my new card?","gold":2,"src_idx":2841}
+{"id":"banking77_15-101","split":"test","state":"I don't think my top up is working correctly","gold":9,"src_idx":2665}
+{"id":"banking77_15-102","split":"test","state":"Some idiot stole my card.","gold":3,"src_idx":468}
+{"id":"banking77_15-103","split":"test","state":"Is it a good time to exchange?","gold":7,"src_idx":93}
+{"id":"banking77_15-104","split":"test","state":"I need to cancel an incorrect transaction.","gold":11,"src_idx":701}
+{"id":"banking77_15-105","split":"test","state":"Is there a way to revert my transaction from this morning?","gold":11,"src_idx":696}
+{"id":"banking77_15-106","split":"test","state":"How long should I expect for the card to arrive?","gold":1,"src_idx":302}
+{"id":"banking77_15-107","split":"test","state":"My card does not work","gold":4,"src_idx":369}
+{"id":"banking77_15-108","split":"test","state":"Is there any discount for someone that exchanges currencies frequently?","gold":8,"src_idx":2766}
+{"id":"banking77_15-109","split":"test","state":"Why is my top-up still pending?","gold":10,"src_idx":674}
+{"id":"banking77_15-110","split":"test","state":"I want a refund for my purchase","gold":13,"src_idx":1713}
+{"id":"banking77_15-111","split":"test","state":"I ordered a card and I still haven't received it. It's been two weeks. What can I do?","gold":0,"src_idx":35}
+{"id":"banking77_15-112","split":"test","state":"Is there a fee for exchanging currencies?","gold":8,"src_idx":2763}
+{"id":"banking77_15-113","split":"test","state":"Hello I changed my mind and really need a refund on one of things I bought recently. Can you please cancel the transaction and get my money back. Please it's urgent.","gold":13,"src_idx":1703}
+{"id":"banking77_15-114","split":"test","state":"why do your exchange rates change","gold":7,"src_idx":115}
+{"id":"banking77_15-115","split":"test","state":"Why is my debit card being declined when I have money?","gold":6,"src_idx":1819}
+{"id":"banking77_15-116","split":"test","state":"What do I need to do to get a refund?","gold":13,"src_idx":1693}
+{"id":"banking77_15-117","split":"test","state":"I need to change my PIN.","gold":14,"src_idx":2141}
+{"id":"banking77_15-118","split":"test","state":"I think my top up did not work","gold":9,"src_idx":2657}
+{"id":"banking77_15-119","split":"test","state":"Where is the tracking number for the card you sent me?","gold":0,"src_idx":39}
+{"id":"banking77_15-120","split":"test","state":"I ordered a card but it has not arrived. Help please!","gold":0,"src_idx":2}
+{"id":"banking77_15-121","split":"test","state":"I'm pretty sure my top up failed. How do I fix this?","gold":9,"src_idx":2673}
+{"id":"banking77_15-122","split":"test","state":"Somehow I am missing my card.  What should I do?","gold":3,"src_idx":465}
+{"id":"banking77_15-123","split":"test","state":"I just got this card & I don't know how to activate it.","gold":2,"src_idx":2873}
+{"id":"banking77_15-124","split":"test","state":"I am still waiting for a transaction to be completed","gold":12,"src_idx":841}
+{"id":"banking77_15-125","split":"test","state":"I need to do a refund","gold":13,"src_idx":1681}
+{"id":"banking77_15-126","split":"test","state":"How long does a card delivery take?","gold":0,"src_idx":11}
+{"id":"banking77_15-127","split":"test","state":"How do I deal with a stolen card?","gold":3,"src_idx":454}
+{"id":"banking77_15-128","split":"test","state":"why isnt top up working","gold":9,"src_idx":2674}
+{"id":"banking77_15-129","split":"test","state":"I transferred money but the recipient says it has not arrived. Why would this be?","gold":12,"src_idx":846}
+{"id":"banking77_15-130","split":"test","state":"Can you please identify the problem with my bank card?","gold":4,"src_idx":367}
+{"id":"banking77_15-131","split":"test","state":"I need my card to come as soon as possible.","gold":1,"src_idx":310}
+{"id":"banking77_15-132","split":"test","state":"I would like to know why my purchases from this morning are still pending.","gold":5,"src_idx":1614}
+{"id":"banking77_15-133","split":"test","state":"Does it cost extra to exchange currencies?","gold":8,"src_idx":2769}
+{"id":"banking77_15-134","split":"test","state":"card is lost, please help","gold":3,"src_idx":449}
+{"id":"banking77_15-135","split":"test","state":"May I receive a different card pin","gold":14,"src_idx":2142}
+{"id":"banking77_15-136","split":"test","state":"How do I go about activating my new card?","gold":2,"src_idx":2864}
+{"id":"banking77_15-137","split":"test","state":"I need to change my PIN. Can I do that at a cash machine?","gold":14,"src_idx":2138}
+{"id":"banking77_15-138","split":"test","state":"Why did my top up not work?","gold":9,"src_idx":2651}
+{"id":"banking77_15-139","split":"test","state":"How might  I change my PIN?","gold":14,"src_idx":2121}
+{"id":"banking77_15-140","split":"test","state":"The day before yesterday, I performed a transfer which was within this country. It still hasn't gone through. Can you check on that? The account number is definitely correct, as I've checked and double checked.","gold":12,"src_idx":859}
+{"id":"banking77_15-141","split":"test","state":"I am still waiting for my card after 1 week.  Is this ok?","gold":0,"src_idx":14}
+{"id":"banking77_15-142","split":"test","state":"When will my card payment be done pending?","gold":5,"src_idx":1606}
+{"id":"banking77_15-143","split":"test","state":"I completed an in country transfer a few days ago and was sure to check the account information several times since the transaction was completed, but the funds are still not available. What is the problem?","gold":12,"src_idx":839}
+{"id":"banking77_15-144","split":"test","state":"Why was my card payment declined?","gold":6,"src_idx":1799}
+{"id":"banking77_15-145","split":"test","state":"Why would I have a pending payment?","gold":5,"src_idx":1625}
+{"id":"banking77_15-146","split":"test","state":"Why was my Payment declined","gold":6,"src_idx":1827}
+{"id":"banking77_15-147","split":"test","state":"Im waiting for my transaction to go through.","gold":12,"src_idx":864}
+{"id":"banking77_15-148","split":"test","state":"Do you offer a discount on multiple currency exchanges?","gold":8,"src_idx":2773}
+{"id":"banking77_15-149","split":"test","state":"I need to know why my credit card was declined for top up? What is the deal here and why did it not go through?","gold":9,"src_idx":2654}
+{"id":"banking77_15-150","split":"test","state":"I need a new Pin how do I go about that?","gold":14,"src_idx":2126}
+{"id":"banking77_15-151","split":"test","state":"Where do I change my PIN?","gold":14,"src_idx":2117}
+{"id":"banking77_15-152","split":"test","state":"My card still hasn't arrived after 2 weeks. Is it lost?","gold":0,"src_idx":19}
+{"id":"banking77_15-153","split":"test","state":"Where do I find the exchange rate?","gold":8,"src_idx":2759}
+{"id":"banking77_15-154","split":"test","state":"I broke my card","gold":4,"src_idx":382}
+{"id":"banking77_15-155","split":"test","state":"I have tried to use my card several times and it does not work.","gold":4,"src_idx":393}
+{"id":"banking77_15-156","split":"test","state":"I want a refund because my package has been taking too long to arrive. How do I go about doing that?","gold":13,"src_idx":1689}
+{"id":"banking77_15-157","split":"test","state":"Please advise what is the exchange rate","gold":7,"src_idx":87}
+{"id":"banking77_15-158","split":"test","state":"What is the base of the exchange rates?","gold":7,"src_idx":100}
+{"id":"banking77_15-159","split":"test","state":"This is URGENT, I typed the wrong payment information for a payment I needed to make and have clicked send, I need to reverse the transaction immediately.","gold":11,"src_idx":693}
+{"id":"banking77_15-160","split":"test","state":"What's the deal? My card was just denied for top up. Why is it not going through?","gold":9,"src_idx":2664}
+{"id":"banking77_15-161","split":"test","state":"I want to get an item refunded","gold":13,"src_idx":1715}
+{"id":"banking77_15-162","split":"test","state":"WHAT CAN I DO AFTER THE CARD MISSING","gold":2,"src_idx":2848}
+{"id":"banking77_15-163","split":"test","state":"What is the current exchange rate for me?","gold":7,"src_idx":119}
+{"id":"banking77_15-164","split":"test","state":"Is my card broken?","gold":4,"src_idx":381}
+{"id":"banking77_15-165","split":"test","state":"I have a pending payment from stuff I bought this morning.","gold":5,"src_idx":1636}
+{"id":"banking77_15-166","split":"test","state":"What is a pending payment?","gold":5,"src_idx":1613}
+{"id":"banking77_15-167","split":"test","state":"My payment has been declined, I thought this issue was fixed!","gold":6,"src_idx":1801}
+{"id":"banking77_15-168","split":"test","state":"How long do card transactions take to clear?","gold":5,"src_idx":1619}
+{"id":"banking77_15-169","split":"test","state":"I made an error in payment yesterday and I need it fixed asap because it's for my rent tomorrow.","gold":11,"src_idx":712}
+{"id":"banking77_15-170","split":"test","state":"My card isn't working anymore.","gold":4,"src_idx":376}
+{"id":"banking77_15-171","split":"test","state":"How are exchange rates calculated?","gold":7,"src_idx":88}
+{"id":"banking77_15-172","split":"test","state":"Is there a way my new card can be renewed?","gold":2,"src_idx":2844}
+{"id":"banking77_15-173","split":"test","state":"I sent money.  They haven't received it.","gold":12,"src_idx":857}
+{"id":"banking77_15-174","split":"test","state":"Somebody has stolen my card, I need help please.","gold":3,"src_idx":474}
+{"id":"banking77_15-175","split":"test","state":"I lost my wallet today with all my credit cards. Will you please block the card and send a replacement?","gold":3,"src_idx":453}
+{"id":"banking77_15-176","split":"test","state":"Why is my top up still pending?","gold":10,"src_idx":662}
+{"id":"banking77_15-177","split":"test","state":"Can I exchange money from abroad without additional costs?","gold":8,"src_idx":2794}
+{"id":"banking77_15-178","split":"test","state":"I topped up but it didn't complete","gold":10,"src_idx":649}
+{"id":"banking77_15-179","split":"test","state":"I was expecting my new card and am wondering why I haven't received it yet?","gold":0,"src_idx":31}
+{"id":"banking77_15-180","split":"test","state":"I tried using my card today and it's not working, can you help me?","gold":4,"src_idx":385}
+{"id":"banking77_15-181","split":"test","state":"So I just put my top-up into the card and it hasn't changed.","gold":10,"src_idx":661}
+{"id":"banking77_15-182","split":"test","state":"I bought some stuff this morning but the payment shows as pending","gold":5,"src_idx":1610}
+{"id":"banking77_15-183","split":"test","state":"I made a money transaction but the recipient can't see it","gold":12,"src_idx":842}
+{"id":"banking77_15-184","split":"test","state":"Can I change the amount I made on a payment that I made to the payment is correct.","gold":11,"src_idx":717}
+{"id":"banking77_15-185","split":"test","state":"How long does it take for transfers to finish?  I sent funds to my pal, and she says that she has not gotten anything.","gold":12,"src_idx":872}
+{"id":"banking77_15-186","split":"test","state":"Could you please activate my card","gold":2,"src_idx":2836}
+{"id":"banking77_15-187","split":"test","state":"My actual card isn't working.","gold":4,"src_idx":380}
+{"id":"banking77_15-188","split":"test","state":"I topped up but the app did not accept it.","gold":9,"src_idx":2655}
+{"id":"banking77_15-189","split":"test","state":"My card is gone I think it was stolen","gold":3,"src_idx":451}
+{"id":"banking77_15-190","split":"test","state":"What are the steps in order to activate my new card?","gold":2,"src_idx":2863}
+{"id":"banking77_15-191","split":"test","state":"I think my card was stolen.","gold":3,"src_idx":459}
+{"id":"banking77_15-192","split":"test","state":"The transfer I did hasn't arrived","gold":12,"src_idx":847}
+{"id":"banking77_15-193","split":"test","state":"What are your currency exchange fees?","gold":8,"src_idx":2758}
+{"id":"banking77_15-194","split":"test","state":"Why is my top-up still outstanding?","gold":10,"src_idx":667}
+{"id":"banking77_15-195","split":"test","state":"Hello, I am facing the issue with my new card as payments are declining again and again. Please help me in this issue.","gold":6,"src_idx":1825}
+{"id":"banking77_15-196","split":"test","state":"I have a top up that didn't go through.  Why?","gold":9,"src_idx":2638}
+{"id":"banking77_15-197","split":"test","state":"Hi. I'm a new customer to your system and I think something isn't working right - or maybe it is. Maybe you can confirm. I tried to top up today (my first time ever) and it's been stuck at \"pending\" for over an hour now. Is it supposed to do this or is there something wrong in the system?","gold":10,"src_idx":673}
+{"id":"banking77_15-198","split":"test","state":"When can I expect my card to be delivered to the US?","gold":1,"src_idx":288}
+{"id":"banking77_15-199","split":"test","state":"How did you come up with your exchange rates?","gold":7,"src_idx":82}

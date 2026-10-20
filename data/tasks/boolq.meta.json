@@ -1,0 +1,30 @@
+{
+  "type": "noul",
+  "language": "en",
+  "question": "(per item: item.question holds the BoolQ question, capitalized with '?')",
+  "per_item_question": true,
+  "gold_encoding": "boolean (true = yes)",
+  "source": "google/boolq validation (Clark et al. 2019), random sample (natural distribution)",
+  "license": "CC BY-SA 3.0",
+  "name": "boolq",
+  "n": 200,
+  "n_calib": 40,
+  "n_test": 160,
+  "seed": 20261006,
+  "task_seed": 215100970,
+  "gold_dist": {
+    "all": {
+      "true": 123,
+      "false": 77
+    },
+    "calib": {
+      "true": 25,
+      "false": 15
+    },
+    "test": {
+      "false": 62,
+      "true": 98
+    }
+  },
+  "majority_baseline_test_acc": 0.6125
+}

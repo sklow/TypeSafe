@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>修論 RAG Playground</title>
+<style>
+:root { --bg:#f4f3ef; --panel:#fff; --ink:#1f2a37; --muted:#6b7280; --line:#e3e1da; --accent:#2f5d62; --bar:#7aa5a8; --bar-top:#2f5d62; --track:#ecebe5;
+  --auto:#2e7d4f; --auto-bg:#e4f2e9; --human:#b4531a; --human-bg:#fbece0; --hl:#ffe9a8; }
+* { box-sizing:border-box; } html,body { margin:0; height:100%; }
+body { background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,"Hiragino Sans","Noto Sans JP",sans-serif; overflow:hidden; }
+header { height:64px; background:var(--panel); border-bottom:1px solid var(--line); display:flex; align-items:center; justify-content:space-between; padding:0 24px; }
+header h1 { margin:0; font-size:15px; line-height:1.35; } header h1 small { display:block; font-weight:400; color:var(--muted); font-size:12px; }
+#meta { color:var(--muted); font-size:12.5px; text-align:right; font-variant-numeric:tabular-nums; } #meta b { color:var(--ink); }
+.tabs { display:flex; gap:4px; margin-left:24px; } .tabs button { font:inherit; font-size:13px; border:1px solid var(--line); background:#fbfbf9; padding:5px 14px; border-radius:7px; cursor:pointer; color:var(--ink); }
+.tabs button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+main { height:calc(100% - 64px); padding:14px 24px; display:grid; grid-template-columns:380px 1fr; gap:14px; min-height:0; }
+.panel { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px; min-height:0; }
+.left { display:flex; flex-direction:column; gap:8px; }
+label.l { font-size:12px; color:var(--muted); }
+select,textarea { font:inherit; color:var(--ink); border:1px solid var(--line); border-radius:8px; background:#fbfbf9; padding:7px 9px; width:100%; }
+textarea { resize:none; line-height:1.5; } select:focus,textarea:focus { outline:2px solid #b9d3d4; }
+.seg { display:flex; } .seg button { flex:1; font:inherit; font-size:13px; border:1px solid var(--line); background:#fbfbf9; padding:6px; cursor:pointer; }
+.seg button:first-child { border-radius:8px 0 0 8px; } .seg button:last-child { border-radius:0 8px 8px 0; margin-left:-1px; } .seg button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+.tg { display:flex; align-items:center; gap:8px; font-size:13px; cursor:pointer; user-select:none; } .tg input { width:16px; height:16px; }
+button.run { font:inherit; font-weight:600; background:var(--accent); color:#fff; border:0; border-radius:8px; padding:10px; cursor:pointer; } button.run:disabled { opacity:.55; }
+.right { display:flex; flex-direction:column; gap:12px; min-height:0; }
+.chunks { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; }
+.chunk { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:10px 12px; height:218px; overflow:hidden; position:relative; }
+.chunk.dim { opacity:.45; }
+.chunk .h { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); margin-bottom:5px; } .chunk .h b { color:var(--accent); }
+.chunk .t { font-size:12.5px; line-height:1.55; } mark { background:var(--hl); padding:0 1px; border-radius:2px; }
+.chunk::after { content:""; position:absolute; left:0; right:0; bottom:0; height:30px; background:linear-gradient(transparent,#fff); }
+.res { flex:1; min-height:0; overflow:hidden; } .res h3 { margin:0 0 6px; font-size:13px; color:var(--muted); font-weight:600; }
+.bar { display:grid; grid-template-columns:1fr 54px; gap:10px; align-items:center; margin:7px 0; } .bar .nm { font-size:13.5px; margin-bottom:2px; }
+.bar .track { height:16px; background:var(--track); border-radius:8px; overflow:hidden; } .bar .fill { height:100%; background:var(--bar); width:0; transition:width .6s cubic-bezier(.2,.8,.2,1); border-radius:8px; }
+.bar.top .fill { background:var(--bar-top); } .bar.top .nm { font-weight:700; } .bar .pct { text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); } .bar .gold { color:var(--auto); font-weight:700; margin-left:6px; font-size:12px; }
+.gate { margin-top:10px; padding:8px 12px; border-radius:8px; display:flex; justify-content:space-between; font-size:13px; } .gate.auto { background:var(--auto-bg); color:var(--auto); } .gate.human { background:var(--human-bg); color:var(--human); }
+.ans { font-size:15px; line-height:1.7; background:#fbfbf9; border:1px solid var(--line); border-radius:8px; padding:10px 14px; }
+.gauge { height:22px; background:var(--track); border-radius:11px; position:relative; overflow:hidden; margin:12px 0 4px; } .gauge .fill { height:100%; background:linear-gradient(90deg,#9bbfc1,var(--bar-top)); width:0; transition:width .6s cubic-bezier(.2,.8,.2,1); } .gauge .thr { position:absolute; top:0; bottom:0; width:2px; background:rgba(0,0,0,.35); }
+.big { font-size:13px; color:var(--muted); } .big b { color:var(--ink); font-size:18px; }
+.empty { color:var(--muted); text-align:center; padding:40px 0; } .err { background:var(--human-bg); color:var(--human); padding:10px; border-radius:8px; }
+.res2 { grid-column:1 / -1; display:grid; grid-template-columns:1.25fr 1fr; gap:14px; min-height:0; }
+table { border-collapse:collapse; width:100%; font-size:13px; } th { text-align:left; color:var(--muted); font-size:12px; padding:6px; border-bottom:1px solid var(--line); } td { padding:7px 6px; border-bottom:1px solid #f0eee8; font-variant-numeric:tabular-nums; }
+.legend { display:flex; gap:16px; font-size:12px; color:var(--muted); margin-top:4px; } .legend i { display:inline-block; width:12px; height:12px; border-radius:3px; vertical-align:middle; margin-right:5px; }
+.note { font-size:12px; color:var(--muted); margin-top:8px; }
+.vcol { flex:1; min-width:0; } .vcols { display:flex; gap:18px; } .vcol h4 { margin:0 0 4px; font-size:13px; } .chunk::after{display:block} #mainV .chunk::after { display:none; }
+
+@media (max-width: 600px) {
+  html,body { height:auto; } body { overflow-y:auto; font-size:16px; }
+  header { height:auto; flex-wrap:wrap; gap:6px; padding:10px 14px; align-items:flex-start; }
+  header > div:first-child { flex-wrap:wrap; gap:8px; } .tabs { margin-left:0; } .tabs button { font-size:15px; padding:7px 14px; }
+  header h1 { font-size:17px; } header h1 small { font-size:12.5px; } #meta { font-size:13px; text-align:left; }
+  main { display:block !important; height:auto; padding:10px 12px 120px; } main[style*="display: none"] { display:none !important; }
+  .panel { margin-bottom:12px; } .left { gap:10px; }
+  select,textarea { font-size:16px; } .seg button { font-size:15px; padding:9px; } .tg { font-size:15px; } button.run { font-size:18px; padding:14px; }
+  .right { display:flex; flex-direction:column; } .right .res { order:-1; overflow:visible; } .chunks { grid-template-columns:1fr !important; gap:10px; }
+  .chunk { height:150px; } .chunk .t { font-size:14px; } .chunk .h { font-size:13px; }
+  .bar .nm { font-size:16px; } .bar .pct { font-size:16px; } .bar .track { height:18px; }
+  .ans { font-size:17px; } .gate { font-size:15px; padding:10px 12px; } .big { font-size:15px; } .big b { font-size:22px; } .res h3 { font-size:15px; }
+  .vcols { flex-direction:column; } #mainV .chunk { height:auto !important; } #mainV .chunk img { max-height:230px !important; }
+  .res2 { display:block; } .res2 .panel { margin-bottom:12px; } table { font-size:14px; }
+  .empty { padding:24px 0; }
+}
+</style>
+</head>
+<body>
+<header>
+  <div style="display:flex;align-items:center">
+    <h1>修論 RAG Playground<small>graphite 上単原子層 4He 薄膜の domain wall 内における流動性の検証</small></h1>
+    <div class="tabs"><button id="tabQ" class="on">質問する</button><button id="tabV">画像比較</button><button id="tabR">評価結果</button></div>
+  </div>
+  <div id="meta">&nbsp;</div>
+</header>
+<main id="mainQ">
+  <section class="panel left">
+    <div class="seg" id="modeSeg"><button data-m="choice" class="on">選択式（Jev choice）</button><button data-m="open">自由記述（生成→検証）</button></div>
+    <label class="l" for="preset">例題</label><select id="preset"></select>
+    <label class="l" for="q">質問</label><textarea id="q" rows="4" spellcheck="false"></textarea>
+    <div id="optBox"><label class="l" for="opts">選択肢（1 行 1 つ）</label><textarea id="opts" rows="5" spellcheck="false"></textarea></div>
+    <label class="tg"><input type="checkbox" id="noref"> 参考資料なし（モデルに論文を渡さない）</label>
+    <label class="tg" style="font-size:12px;color:var(--muted)">自動採用のしきい値 <input id="thr" type="number" min="0" max="1" step="0.05" value="0.8" style="width:64px;padding:3px 6px;border:1px solid var(--line);border-radius:6px"></label>
+    <button class="run" id="run">実行</button>
+  </section>
+  <section class="right">
+    <div class="chunks" id="chunks"></div>
+    <div class="panel res" id="res"><div class="empty">質問を選んで「実行」を押してください。論文から検索した上位 3 チャンクと、回答の確率が表示されます。</div></div>
+  </section>
+</main>
+<main id="mainV" style="display:none">
+  <section class="panel left">
+    <label class="l" for="pair">図の組（左=論文の図 / 右=比較図）</label><select id="pair"></select>
+    <label class="l">論文の図が示す結論</label><div id="claim" style="font-size:13px;line-height:1.55;background:#fbfbf9;border:1px solid var(--line);border-radius:8px;padding:8px 10px;max-height:150px;overflow:hidden"></div>
+    <label class="l">判定エンジン</label>
+    <div class="seg" id="engSeg"><button data-e="jev" class="on">Jev型（9B+vision）</button><button data-e="glance">Glance</button><button data-e="both">両方</button></div>
+    <label class="tg" style="font-size:12px;color:var(--muted)">自動採用のしきい値 <input id="thrV" type="number" min="0" max="1" step="0.05" value="0.8" style="width:64px;padding:3px 6px;border:1px solid var(--line);border-radius:6px"></label>
+    <button class="run" id="runV">実行</button>
+    <div class="note">質問: 「右の図は左の図と同じ結論を示しているか」(noul)、「左右の図の関係」(choice 3択)</div>
+  </section>
+  <section class="right">
+    <div class="chunks" style="grid-template-columns:1fr 1fr"><div class="chunk" style="height:300px;padding:6px;text-align:center"><div class="h"><b>左: 論文の図</b><span id="lsrc"></span></div><img id="imgL" style="max-width:100%;max-height:262px"></div>
+      <div class="chunk" style="height:300px;padding:6px;text-align:center"><div class="h"><b>右: 比較図</b><span></span></div><img id="imgR" style="max-width:100%;max-height:262px"></div></div>
+    <div class="panel res" id="resV"><div class="empty">図の組を選んで「実行」を押してください。</div></div>
+  </section>
+</main>
+<main id="mainR" style="display:none">
+  <div class="res2">
+    <div class="panel" id="rAcc"></div>
+    <div class="panel" id="rTab"></div>
+  </div>
+</main>
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const el = (t, c, x) => { const e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; };
+let mode = "choice", presets = { choice: [] };
+const OPEN = [
+  { question: "本研究での希釈冷凍機の最低温度はどの程度で、本来の性能に届かなかった理由は何か。", gold: "16〜20 mK 程度（ポンプの不具合のため）", note: "資料にある" },
+  { question: "graphite と AT カット水晶を接合する際、治具を電気炉に入れてどのような雰囲気・温度・時間で加熱したか。", gold: "水素雰囲気中 300 ℃で 2 時間", note: "資料にある" },
+  { question: "本研究の測定期間中に発生し、結果を大きく変えた地震の発生年月・震源地・マグニチュードは何か。", gold: "2021年2月（13日）、福島県沖、M7.3", note: "資料にある" },
+  { question: "本研究で使用した SQUID 磁束計の型番は何か。", gold: null, note: "資料に無い（人間に回したい例）" },
+];
+const STOP = new Set(["する", "した", "いる", "ある", "これ", "それ", "どの", "どれ", "なに", "ため", "もの", "こと", "本研究", "本論文", "について", "として", "いくら", "どれくらい", "何か"]);
+function terms(text) {
+  const out = new Set();
+  for (const m of text.matchAll(/[A-Za-z0-9][A-Za-z0-9.⁻⁺]*|[一-龥ァ-ヶー]{2,}/g)) { const w = m[0]; if (w.length >= 2 && !STOP.has(w)) out.add(w); }
+  return [...out].sort((a, b) => b.length - a.length).slice(0, 14);
+}
+function excerpt(text, ts) {
+  let at = -1;
+  for (const t of ts) { const i = text.toLowerCase().indexOf(t.toLowerCase()); if (i >= 0 && (at < 0 || i < at)) at = i; }
+  const st = Math.max(0, (at < 0 ? 0 : at) - 40); let s = (st ? "…" : "") + text.slice(st, st + 330);
+  let h = esc(s);
+  for (const t of ts) h = h.replace(new RegExp(esc(t).replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi"), (m) => `<mark>${m}</mark>`);
+  return h;
+}
+function renderChunks(chunks, query, dim) {
+  const box = $("chunks"); box.replaceChildren(); const ts = terms(query);
+  chunks.forEach((c, i) => { const d = el("div", "chunk" + (dim ? " dim" : "")); const h = el("div", "h"); const l = el("span"); l.innerHTML = `<b>#${i + 1}</b>　${esc(c.section)} ・ p.${c.page}`; h.append(l, el("span", null, "類似度 " + c.score.toFixed(2))); const t = el("div", "t"); t.innerHTML = excerpt(c.text, ts); d.append(h, t); box.append(d); });
+  if (dim) { const n = el("div", null, "参考資料なし: 検索結果はモデルに渡されません"); n.style.cssText = "grid-column:1/-1;font-size:12px;color:var(--human);margin-top:-6px"; box.append(n); }
+}
+const pct = (p) => (p * 100).toFixed(p < 0.995 && p >= 0.005 ? 0 : 0) + "%";
+function gate(v, label, t) {
+  const thr = t ?? (Number($("thr").value) || 0.8), ok = v >= thr, g = el("div", "gate " + (ok ? "auto" : "human"));
+  g.append(el("b", null, ok ? "✓ 自動採用" : "↪ 人間に確認"), el("span", null, `${label} ${v.toFixed(2)} ${ok ? "≥" : "<"} ${thr}`)); return g;
+}
+function setMeta(model, ms, extra) { $("meta").innerHTML = `model <b>${esc(model)}</b><br>latency <b>${ms} ms</b>${extra ? "　" + extra : ""}`; }
+
+function loadPreset() {
+  const sel = $("preset"); sel.replaceChildren();
+  if (mode === "choice") presets.choice.forEach((p, i) => sel.add(new Option(`${p.id}　${p.question.slice(0, 30)}…`, i)));
+  else OPEN.forEach((p, i) => sel.add(new Option(`${p.note}：${p.question.slice(0, 22)}…`, i)));
+  applyPreset();
+}
+function applyPreset() {
+  const i = Number($("preset").value) || 0;
+  if (mode === "choice") { const p = presets.choice[i]; if (!p) return; $("q").value = p.question; $("opts").value = p.options.join("\n"); }
+  else { $("q").value = OPEN[i].question; }
+  $("optBox").style.display = mode === "choice" ? "" : "none";
+}
+$("preset").onchange = applyPreset;
+$("modeSeg").querySelectorAll("button").forEach((b) => (b.onclick = () => { mode = b.dataset.m; $("modeSeg").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); loadPreset(); $("res").innerHTML = '<div class="empty">「実行」を押してください。</div>'; $("chunks").replaceChildren(); }));
+
+async function post(url, body) { const r = await fetch(url, { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }); const j = await r.json(); if (!r.ok) throw new Error(j.error || r.status); return j; }
+async function run() {
+  const btn = $("run"), res = $("res"), noref = $("noref").checked, question = $("q").value.trim();
+  btn.disabled = true; btn.textContent = "実行中…";
+  try {
+    if (mode === "choice") {
+      const options = $("opts").value.split("\n").map((s) => s.trim()).filter(Boolean);
+      const j = await post("/api/choice", { question, options, ref: !noref });
+      renderChunks(j.chunks, question + " " + options.join(" "), noref);
+      const gold = presets.choice[Number($("preset").value)]?.gold; const goldName = gold != null && $("q").value.trim() === presets.choice[Number($("preset").value)].question ? presets.choice[Number($("preset").value)].options[gold] : null;
+      res.replaceChildren(el("h3", null, noref ? "回答の確率（参考資料なし）" : "回答の確率（参考資料 上位 3 件つき）"));
+      Object.entries(j.answer.probabilities).sort((a, b) => b[1] - a[1]).forEach(([name, p]) => {
+        const b = el("div", "bar" + (name === j.answer.choice ? " top" : "")), w = el("div"), nm = el("div", "nm", name);
+        if (name === goldName) nm.append(el("span", "gold", "✓ 正解（論文）"));
+        const tr = el("div", "track"), f = el("div", "fill"); tr.append(f); w.append(nm, tr); b.append(w, el("div", "pct", pct(p))); res.append(b);
+        requestAnimationFrame(() => requestAnimationFrame(() => (f.style.width = p * 100 + "%")));
+      });
+      res.append(gate(j.answer.confidence, "confidence"));
+      setMeta(j.model, j.total_ms, `（Jev ${j.jev_ms} ms）`);
+    } else {
+      const j = await post("/api/open", { question, ref: !noref });
+      renderChunks(j.chunks, question, noref);
+      res.replaceChildren(el("h3", null, noref ? "生成した回答（参考資料なし）" : "生成した回答（参考資料 上位 3 件つき）"));
+      res.append(el("div", "ans", j.answer));
+      const og = OPEN.find((o) => o.question === question); if (og) { const gd = el("div", "big", og.gold ? "正解（論文）: " + og.gold : "正解: 論文に記載なし"); gd.style.marginTop = "6px"; res.append(gd); }
+      const p = j.p_supported ?? 0, thr = Number($("thr").value) || 0.8;
+      const gz = el("div", "gauge"), f = el("div", "fill"), th = el("div", "thr"); th.style.left = thr * 100 + "%"; gz.append(f, th); res.append(gz);
+      requestAnimationFrame(() => requestAnimationFrame(() => (f.style.width = p * 100 + "%")));
+      const big = el("div", "big"); big.append(document.createTextNode("P(裏付けあり) "), el("b", null, pct(p)), document.createTextNode("　Jev が「回答は資料に裏付けられているか」を判定")); res.append(big);
+      res.append(gate(p, "P(裏付け)"));
+      setMeta(j.model, j.total_ms, `（生成 ${j.gen_ms} ms ＋ 検証 ${j.jev_ms} ms）`);
+    }
+  } catch (e) { res.replaceChildren(el("div", "err", "エラー: " + e.message)); }
+  finally { btn.disabled = false; btn.textContent = "実行"; }
+}
+$("run").onclick = run;
+
+// ---- 評価結果タブ ----
+const COND = [["none", "資料なし", "#c1440e"], ["rag-k3", "RAG 上位3", "#2f5d62"], ["rag-k5", "RAG 上位5", "#7aa5a8"], ["oracle", "正解チャンク", "#8a8f98"]];
+function mdTable(md) { // RESULTS.md の最初のモデルの表だけを簡易表示
+  const lines = md.split("\n"), out = []; let n = 0;
+  for (const l of lines) { if (l.startsWith("## ")) { if (++n > 2) break; out.push(`<div style="font-size:12px;font-weight:600;margin-top:4px">${esc(l.slice(3))}</div>`); } else if (l.startsWith("|") && !/^\|[-| ]+\|$/.test(l)) { const cs = l.split("|").slice(1, -1).map((x) => x.trim()); const k = cs.length > 6 ? [0, 1, 2, 3, 4] : cs.map((_, i) => i); out.push('<div style="font-size:11px;display:flex;gap:8px;border-bottom:1px solid #f0eee8;padding:2px 0">' + k.map((i) => `<span style="flex:${i ? 1 : 3}">${esc(cs[i] ?? "")}</span>`).join("") + "</div>"); } }
+  return out.join("");
+}
+async function renderResults() {
+  const S = await (await fetch("/api/summary")).json(), O = await (await fetch("/api/open-results")).json();
+  const ms = Object.keys(S); if (!ms.length) { $("rAcc").innerHTML = '<div class="empty">データなし</div>'; return; }
+  const NW = innerWidth < 600, f = NW ? 1.35 : 1, W = NW ? 520 : 700, H = NW ? 400 : 330, L = NW ? 56 : 50, R = 10, T = 18, B = 40, pw = W - L - R, ph = H - T - B, Y = (v) => T + ph * (1 - v);
+  let g = ""; for (let v = 0; v <= 1.0001; v += 0.2) g += `<line x1="${L}" x2="${W - R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#e8e6df"/><text x="${L - 8}" y="${Y(v) + 4}" text-anchor="end" font-size="${12 * f}" fill="#6b7280">${(v * 100).toFixed(0)}%</text>`;
+  const gw = pw / ms.length;
+  ms.forEach((m, i) => {
+    const x0 = L + i * gw + gw * 0.08, bw = (gw * 0.84) / COND.length;
+    COND.forEach(([c, , col], k) => { const e = S[m][c]; if (!e) return; const a = e.raw.accuracy, ci = e.raw.ci?.accuracy; const x = x0 + k * bw;
+      g += `<rect x="${x + 3}" y="${Y(a)}" width="${bw - 6}" height="${ph * a}" rx="3" fill="${col}"><title>${m} ${c} ${(a * 100).toFixed(1)}%</title></rect><text x="${x + bw / 2}" y="${Y(a) - 6}" text-anchor="middle" font-size="${12 * f}" font-weight="600" fill="#1f2a37">${(a * 100).toFixed(0)}</text>`;
+      if (ci) g += `<line x1="${x + bw / 2}" x2="${x + bw / 2}" y1="${Y(ci[0])}" y2="${Y(ci[1])}" stroke="#1f2a37" stroke-width="1.4"/>`; });
+    g += `<text x="${L + i * gw + gw / 2}" y="${H - 14}" text-anchor="middle" font-size="${13 * f}" font-weight="600" fill="#1f2a37">${esc(m.replace(/^qwen/i, "Qwen"))}</text>`;
+  });
+  const _acc = `<div style="font-weight:600;margin-bottom:2px">選択式 RAG の正答率（test 60 問・4 択/二値、95% CI）</div><div class="legend">${COND.map(([, n, c]) => `<span><i style="background:${c}"></i>${n}</span>`).join("")}</div><svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet">${g}</svg>`;
+  const f3 = (x) => (x == null ? "–" : x.toFixed(3));
+  let rows = ""; ms.forEach((m) => COND.forEach(([c, n]) => { const e = S[m][c]; if (!e) return; rows += `<tr><td>${esc(m.replace(/^qwen/i, "Qwen"))}</td><td>${n}</td><td>${(e.raw.accuracy * 100).toFixed(1)}%</td><td>${f3(e.raw.ece)}</td><td>${f3(e.raw.auroc)}</td></tr>`; }));
+  const V = await (await fetch("/api/vision-results")).json();
+  let vrows = ""; const f1 = (x) => (x == null ? "–" : (x * 100).toFixed(1) + "%");
+  for (const [eng, sm] of [["Jev型", V.jev], ["Glance", V.glance]]) for (const [run, v] of Object.entries(sm ?? {})) for (const [cond, c] of Object.entries(v.conds ?? {})) { if (!c?.all || cond !== 'pair') continue; vrows += `<tr><td>${eng}</td><td>${esc(run)}</td><td>${esc(cond)}</td><td>${f1(c.all.acc ?? c.all.accuracy)}</td><td>${(c.all.ece ?? NaN).toFixed ? c.all.ece.toFixed(3) : "–"}</td><td>${f1(c.opposite_judged_same?.rate)}</td><td>${c.latency_ms_p50_item != null ? Math.round(c.latency_ms_p50_item) : "–"}</td></tr>`; }
+  const vhtml = vrows ? `<div style="font-weight:600;margin:12px 0 4px">画像比較（図の組 30 件）</div><table style="font-size:12px"><thead><tr><th>方式</th><th>run</th><th>条件</th><th>acc</th><th>ECE</th><th>逆を同じと誤判定</th><th>p50 ms</th></tr></thead><tbody>${vrows}</tbody></table>` : "";
+  $("rAcc").innerHTML = _acc + vhtml;
+  $("rTab").innerHTML = `<div style="font-weight:600;margin-bottom:6px">較正と選別能力（素の確率）</div><table><thead><tr><th>モデル</th><th>条件</th><th>正答率</th><th>ECE</th><th>AUROC</th></tr></thead><tbody>${rows}</tbody></table><div class="note">資料なしでは ECE が高く AUROC が約 0.6 と、確信度が当てにならない。RAG で正答率・較正とも大きく改善。</div>` +
+    (O && O.md ? `<div style="font-weight:600;margin:12px 0 4px">自由記述（生成→Jev 検証）</div><div style="max-height:190px;overflow:hidden">${mdTable(O.md)}</div>` : "");
+}
+function showTab(t) {
+  for (const [k, id] of [["Q", "mainQ"], ["V", "mainV"], ["R", "mainR"]]) { $("tab" + k).classList.toggle("on", k === t); $(id).style.display = k === t ? (k === "R" ? "grid" : "") : "none"; }
+}
+$("tabQ").onclick = () => showTab("Q");
+$("tabV").onclick = async () => { showTab("V"); if (!pairs.length) await loadPairs(); };
+$("tabR").onclick = async () => { showTab("R"); await renderResults(); };
+
+// ---- 画像比較 ----
+let pairs = [], eng = "jev";
+const RELJA = { same: "同じ結論", opposite: "逆の結論", unrelated: "無関係" };
+async function loadPairs() {
+  pairs = await (await fetch("/api/pairs")).json(); const sel = $("pair"); sel.replaceChildren();
+  pairs.forEach((p, i) => sel.add(new Option(`${p.src?.label ?? p.thesis_fig.split("/").pop()} × ${p.other_fig.split("/").pop().replace(".png", "")}`, i)));
+  applyPair();
+}
+function applyPair() {
+  const p = pairs[Number($("pair").value) || 0]; if (!p) return;
+  $("claim").textContent = p.claim; $("imgL").src = "/fig/" + p.thesis_fig.replace(/^figs\//, ""); $("imgR").src = "/fig/" + p.other_fig.replace(/^figs\//, ""); $("lsrc").textContent = p.src?.label ?? "";
+  $("resV").innerHTML = '<div class="empty">「実行」を押してください。</div>';
+}
+$("pair").onchange = applyPair;
+$("engSeg").querySelectorAll("button").forEach((b) => (b.onclick = () => { eng = b.dataset.e; $("engSeg").querySelectorAll("button").forEach((x) => x.classList.toggle("on", x === b)); }));
+function engineCol(name, r, gold) {
+  const c = el("div", "vcol"); c.append(el("h4", null, name));
+  if (r.error) { c.append(el("div", "err", "エラー: " + r.error)); return c; }
+  const thr = Number($("thrV").value) || 0.8;
+  c.append(el("div", "big", "「同じ結論を示している」確率"));
+  const gz = el("div", "gauge"), f = el("div", "fill"), th = el("div", "thr"); th.style.left = "50%"; gz.append(f, th); c.append(gz);
+  requestAnimationFrame(() => requestAnimationFrame(() => (f.style.width = r.same * 100 + "%")));
+  const big = el("div", "big"); big.append(document.createTextNode("P(yes) "), el("b", null, pct(r.same)), document.createTextNode(`　正解: ${gold.gold_same ? "yes（同じ）" : "no"}`)); c.append(big);
+  c.append(gate(Math.abs(2 * r.same - 1), "|2p−1|", thr));
+  if (r.relation) { const h = el("div", "big", "関係（3択）"); h.style.marginTop = "8px"; c.append(h);
+    Object.entries(r.relation.probabilities).sort((a, b) => b[1] - a[1]).forEach(([n, p]) => { const b = el("div", "bar" + (n === r.relation.choice ? " top" : "")), w = el("div"), nm = el("div", "nm", n); if (n === gold.rel_gold) nm.append(el("span", "gold", "✓ 正解")); const tr = el("div", "track"), ff = el("div", "fill"); tr.append(ff); w.append(nm, tr); b.append(w, el("div", "pct", pct(p))); c.append(b); requestAnimationFrame(() => requestAnimationFrame(() => (ff.style.width = p * 100 + "%"))); }); }
+  c.append(el("div", "note", `latency ${r.ms} ms`));
+  return c;
+}
+$("runV").onclick = async () => {
+  const btn = $("runV"), res = $("resV"), p = pairs[Number($("pair").value) || 0]; btn.disabled = true; btn.textContent = "実行中…";
+  try {
+    const j = await post("/api/vision", { pair_id: p.id, engine: eng });
+    res.replaceChildren(el("h3", null, `この組の正解: ${RELJA[j.pair.relation]}`)); const row = el("div", "vcols");
+    if (j.engines.jev) row.append(engineCol("Jev型（Qwen3.5-9B + vision）", j.engines.jev, j.pair));
+    if (j.engines.glance) row.append(engineCol("Glance", j.engines.glance, j.pair));
+    res.append(row);
+    const m = j.engines.jev?.model ?? j.engines.glance?.model; const ms = Object.values(j.engines).map((e) => e.ms).filter(Boolean);
+    setMeta(m ?? "-", Math.max(...ms, 0), j.cached ? "（事前に実行した結果を表示）" : "");
+  } catch (e) { res.replaceChildren(el("div", "err", "エラー: " + e.message)); }
+  finally { btn.disabled = false; btn.textContent = "実行"; }
+};
+
+(async () => { presets = await (await fetch("/api/presets")).json(); loadPreset(); })();
+</script>
+</body>
+</html>

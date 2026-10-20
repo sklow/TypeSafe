@@ -1,0 +1,51 @@
+{
+  "model": "gemma-4-e2b-v2",
+  "runs": 20,
+  "warmups": 3,
+  "passage_chars": 631,
+  "three_questions_same_state_warm": {
+    "client_ms": {
+      "n": 20,
+      "p50": 355.5387495000002,
+      "p90": 366.8834375000001,
+      "mean": 359.2283353000001
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 355,
+      "p90": 367,
+      "mean": 359.1
+    },
+    "errors": 0
+  },
+  "three_questions_vary_state_cold": {
+    "client_ms": {
+      "n": 20,
+      "p50": 512.199458,
+      "p90": 585.3784250000001,
+      "mean": 529.30263535
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 512,
+      "p90": 585.4000000000002,
+      "mean": 529.15
+    },
+    "errors": 0
+  },
+  "noul_only_same_state_warm": {
+    "client_ms": {
+      "n": 20,
+      "p50": 160.1873340000002,
+      "p90": 160.52613750000054,
+      "mean": 160.18593764999986
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 160,
+      "p90": 160,
+      "mean": 160
+    },
+    "errors": 0
+  }
+}

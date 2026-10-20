@@ -1,0 +1,324 @@
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q001", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q002", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q003o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q004", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q005", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q006", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q009", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q010o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q012", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q013", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q015", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q017", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q018o", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q019", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q020", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q022", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q023", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q025", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q026", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q029", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q030o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q031", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q032", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q034", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q035o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q036", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q039o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q041", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q043", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q045", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q046", "correct": false, "note": "T^1 と回答（goldはT^1.8）"}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q047o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q049", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q050", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q051", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q052", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q053", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q054", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q055o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q057", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q058", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q060", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q061", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q062", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q063", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q064", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q065", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q069", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q073", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q074", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q077", "correct": false, "note": "0.0412（補正前の式5.1の係数）と回答、補正後は0.412"}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q078", "correct": false, "note": "Q≈10^4 と回答、許容範囲外"}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q079", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_rag", "id": "q080", "correct": false, "note": "28.0 nm⁻²（表1.1『第3層目』行）を回答。本文は3原子層目生成開始=20.4と明記（判断迷い）"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q001", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q002", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q003o", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q004", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q005", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q006", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q009", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q010o", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q012", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q013", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q015", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q017", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q018o", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q019", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q020", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q022", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q023", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q025", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q026", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q029", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q030o", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q031", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q032", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q034", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q035o", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q036", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q039o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q041", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q043", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q045", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q046", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q047o", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q049", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q050", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q051", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q052", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q053", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q054", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q055o", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q057", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q058", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q060", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q061", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q062", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q063", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q064", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q065", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q069", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q073", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q074", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q077", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q078", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q079", "correct": false}
+{"model": "qwen3.5-9b", "cond": "none_rag", "id": "q080", "correct": false}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q001", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q002", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q003o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q004", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q005", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q006", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q009", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q010o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q012", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q013", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q015", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q017", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q018o", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q019", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q020", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q022", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q023", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q025", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q026", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q029", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q030o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q031", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q032", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q034", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q035o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q036", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q039o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q041", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q043", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q045", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q046", "correct": false, "note": "T^1 と回答（goldはT^1.8）"}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q047o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q049", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q050", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q051", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q052", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q053", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q054", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q055o", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q057", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q058", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q060", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q061", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q062", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q063", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q064", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q065", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q069", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q073", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q074", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q077", "correct": false, "note": "0.0412（補正前の式5.1の係数）と回答、補正後は0.412"}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q078", "correct": false, "note": "Q≈10^4 と回答、許容範囲外"}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q079", "correct": true}
+{"model": "qwen3.5-9b", "cond": "rag_none", "id": "q080", "correct": false, "note": "28.0 nm⁻²（表1.1『第3層目』行）を回答。本文は3原子層目生成開始=20.4と明記（判断迷い）"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q001", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q002", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q003o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q004", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q005", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q006", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q009", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q010o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q012", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q013", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q015", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q017", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q018o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q019", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q020", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q022", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q023", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q025", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q026", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q029", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q030o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q031", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q032", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q034", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q035o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q036", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q039o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q041", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q043", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q045", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q046", "correct": false, "note": "T^1 と回答（goldはT^1.8）"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q047o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q049", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q050", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q051", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q052", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q053", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q054", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q055o", "correct": false, "note": "「ほぼ円形（きれいな半円）」と円/半円を併記し矛盾（判断迷い）"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q057", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q058", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q060", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q061", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q062", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q063", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q064", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q065", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q069", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q073", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q074", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q077", "correct": false, "note": "0.0412（補正前の式5.1の係数）と回答、補正後は0.412"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q078", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q079", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_rag", "id": "q080", "correct": false, "note": "28.0 nm⁻²（表1.1『第3層目』行）を回答。本文は3原子層目生成開始=20.4と明記（判断迷い）"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q001", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q002", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q003o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q004", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q005", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q006", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q009", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q010o", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q012", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q013", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q015", "correct": true, "note": "核心(T²)正解、付随説明に不正確な記述あり"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q017", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q018o", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q019", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q020", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q022", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q023", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q025", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q026", "correct": false, "note": "数nmと曖昧で核心値(2nm)を特定せず"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q029", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q030o", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q031", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q032", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q034", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q035o", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q036", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q039o", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q041", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q043", "correct": false, "note": "数〜数十m²と曖昧"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q045", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q046", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q047o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q049", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q050", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q051", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q052", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q053", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q054", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q055o", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q057", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q058", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q060", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q061", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q062", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q063", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q064", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q065", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q069", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q073", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q074", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q077", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q078", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q079", "correct": false}
+{"model": "qwen3.5-4b", "cond": "none_rag", "id": "q080", "correct": false}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q001", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q002", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q003o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q004", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q005", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q006", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q009", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q010o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q012", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q013", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q015", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q017", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q018o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q019", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q020", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q022", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q023", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q025", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q026", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q029", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q030o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q031", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q032", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q034", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q035o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q036", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q039o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q041", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q043", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q045", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q046", "correct": false, "note": "T^1 と回答（goldはT^1.8）"}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q047o", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q049", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q050", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q051", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q052", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q053", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q054", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q055o", "correct": false, "note": "「ほぼ円形（きれいな半円）」と円/半円を併記し矛盾（判断迷い）"}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q057", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q058", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q060", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q061", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q062", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q063", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q064", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q065", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q069", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q073", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q074", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q077", "correct": false, "note": "0.0412（補正前の式5.1の係数）と回答、補正後は0.412"}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q078", "correct": false, "note": "abstain"}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q079", "correct": true}
+{"model": "qwen3.5-4b", "cond": "rag_none", "id": "q080", "correct": false, "note": "28.0 nm⁻²（表1.1『第3層目』行）を回答。本文は3原子層目生成開始=20.4と明記（判断迷い）"}

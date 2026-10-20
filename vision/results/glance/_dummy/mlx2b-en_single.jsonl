@@ -1,0 +1,1 @@
+{"id": "single:s1:q0", "item": "s1", "cond": "single", "qid": "q0", "relation": null, "type": "noul", "K": 2, "gold": 1, "probs": [0.329249, 0.670751], "pred": 1, "conf": 0.670751, "latency_ms": 556.4262908883393, "server_ms": 555, "n_q": 1, "choice": null, "prompt": "Is the Proposed bar higher than 70 in this figure?"}

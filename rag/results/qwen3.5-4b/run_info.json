@@ -1,0 +1,19 @@
+{
+ "model": "qwen3.5-4b",
+ "api": "http://localhost:8789",
+ "conditions": [
+  "none",
+  "rag-k3",
+  "rag-k5",
+  "oracle"
+ ],
+ "mode": "hybrid",
+ "ext": {
+  "x_noul_style": "letter",
+  "x_permutations": 2,
+  "x_heading": "document"
+ },
+ "n_questions": 80,
+ "started_at": "2026-10-06T22:05:18.120Z",
+ "chunks": 246
+}

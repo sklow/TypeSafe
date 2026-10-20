@@ -1,0 +1,41 @@
+{
+  "type": "choice",
+  "language": "en",
+  "question": "Which topic category does this news article belong to?",
+  "options": [
+    "World",
+    "Sports",
+    "Business",
+    "Science and Technology"
+  ],
+  "gold_encoding": "index into options (0-based)",
+  "source": "fancyzhx/ag_news test (Zhang et al. 2015), class-balanced sample (50 per class)",
+  "license": "非商用の研究用途（AG's corpus。HF 上は license: unknown）",
+  "name": "ag_news",
+  "n": 200,
+  "n_calib": 40,
+  "n_test": 160,
+  "seed": 20261006,
+  "task_seed": -1140234453,
+  "gold_dist": {
+    "all": {
+      "0": 50,
+      "1": 50,
+      "2": 50,
+      "3": 50
+    },
+    "calib": {
+      "0": 11,
+      "1": 10,
+      "2": 8,
+      "3": 11
+    },
+    "test": {
+      "0": 39,
+      "1": 40,
+      "2": 42,
+      "3": 39
+    }
+  },
+  "majority_baseline_test_acc": 0.2625
+}

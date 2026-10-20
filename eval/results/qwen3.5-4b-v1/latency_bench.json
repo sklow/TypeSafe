@@ -1,0 +1,51 @@
+{
+  "model": "qwen3.5-4b-v1",
+  "runs": 20,
+  "warmups": 3,
+  "passage_chars": 631,
+  "three_questions_same_state_warm": {
+    "client_ms": {
+      "n": 20,
+      "p50": 360.6980209999997,
+      "p90": 361.41935449999994,
+      "mean": 360.8503938
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 361,
+      "p90": 361.1,
+      "mean": 360.7
+    },
+    "errors": 0
+  },
+  "three_questions_vary_state_cold": {
+    "client_ms": {
+      "n": 20,
+      "p50": 560.8483955000002,
+      "p90": 736.2442832999986,
+      "mean": 628.5357102999998
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 561,
+      "p90": 735.8000000000003,
+      "mean": 628.4
+    },
+    "errors": 0
+  },
+  "noul_only_same_state_warm": {
+    "client_ms": {
+      "n": 20,
+      "p50": 33.00256249999802,
+      "p90": 33.2073955000018,
+      "mean": 33.03085624999985
+    },
+    "server_ms": {
+      "n": 20,
+      "p50": 33,
+      "p90": 33,
+      "mean": 33
+    },
+    "errors": 0
+  }
+}

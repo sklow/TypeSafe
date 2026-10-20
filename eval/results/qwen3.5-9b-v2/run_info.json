@@ -1,0 +1,96 @@
+{
+ "model": "qwen3.5-9b-v2",
+ "api": "http://localhost:8789",
+ "protocol": "auto",
+ "mock": false,
+ "first_started_at": "2026-10-06T18:31:59.339Z",
+ "reverse_options": false,
+ "config": "v2",
+ "ext": {
+  "x_noul_style": "letter",
+  "x_heading": "document",
+  "x_permutations": 2
+ },
+ "server_dir": "server-v2",
+ "prompts_sha256": "8f29ce76a9e963c8a27183118c62f10641a423eb98775580feef12225e9ab2d7",
+ "server_sha256": {
+  "format.ts": "7fdc55e0042be76daf39fc1dd2b5292c05269e5bca25b2ddb194817b7c99c4cc",
+  "index.ts": "4c045f0d0fd5f79738f79e63982476bcf8aa7382c65950d9ae0c1b57e01736c5",
+  "llama.ts": "a91a49f5b394e721b1736caa039468f97770607ebedc7243eb444b64bae05af5",
+  "prompts.ts": "8f29ce76a9e963c8a27183118c62f10641a423eb98775580feef12225e9ab2d7",
+  "types.ts": "c39067ee5924b827b5b1a19c00d52a30b168877a6bef6a5654e416aeb52f56cd"
+ },
+ "tasks_meta_sha256": {
+  "ag_news": "ba7ab214b78cf18b3a45c5f8fd1ad62724f1e4ce78c24468d6b02b77125945a0",
+  "banking77_15": "3365a08a09e859d84640ec2614ea498167fe80a6bbb1c99734e698e5f6bfeb4d",
+  "boolq": "5a31aa7db1ed4a7828f6dfb94df3f0c043ee8d60ba9a75a7d83f2f109e42437b",
+  "marc_ja_positive": "d4d653b667b6f861c631bb098a28ac55bd86463337870af61480029a04ed6b25",
+  "massive_ja_15": "85b7076a5bae0244aebe8be398e5208123ec8263202f66deb36ce728e364debf",
+  "sst5": "b512bb5cedb733a6511e3ad6d2a601176a570e1cf3a563877f840f41c1799cfa",
+  "sst5_as_choice": "6acc0e12c42375a1f7b3ce122a8f7dcc0673d7ca20943caaa404f6f2c187592c",
+  "sst5_perm2": "83c47c8c116ae384aba074b0f3c331af31da3ac6d22a9030bee51db74aeb717d"
+ },
+ "tasks_data_sha256": {
+  "ag_news": "107f6ba0f3a4055bf5043694336b1c1e25d0766c2426ddbaafe803fd77871e4f",
+  "banking77_15": "2983e39ada20fbf020403199aebfb68b4e05f95c6f5e829d6916271e6f7230bf",
+  "boolq": "e923e3706660b7995a806496e56f040a0973b8803e0962ed32684e16338bbcb8",
+  "marc_ja_positive": "2d74f3372d50645639fe8a2a6b8f07ece149b881a81d00d59a4110ec978bd015",
+  "massive_ja_15": "75805b71aa8a6474f55f65a32043fb8ec451690317f745ee48f304499e37075c",
+  "sst5": "3744084669bb4d65ba2b969fff15224711b5a73583c7891acfed9f370fbd9cab",
+  "sst5_as_choice": "4ee6db2645811e567f5cf3d8de3a122b5f1b3ebc67ce7db7aa19cc0c5f14b2f5",
+  "sst5_perm2": "ff492da22c9a7b2e4288055b56733f58548ff9dc88059e3288449e407c609a78"
+ },
+ "invocations": [
+  {
+   "at": "2026-10-06T18:31:59.339Z",
+   "argv": [
+    "--model",
+    "qwen3.5-9b-v2",
+    "--api",
+    "http://localhost:8789",
+    "--tasks",
+    "all",
+    "--concurrency",
+    "2",
+    "--out",
+    "eval/results/qwen3.5-9b-v2/",
+    "--x-noul-style",
+    "letter",
+    "--x-permutations",
+    "2",
+    "--x-heading",
+    "document",
+    "--config",
+    "v2",
+    "--server-dir",
+    "server-v2"
+   ],
+   "reverse_options": false
+  },
+  {
+   "at": "2026-10-06T18:48:51.535Z",
+   "argv": [
+    "--model",
+    "qwen3.5-9b-v2",
+    "--api",
+    "http://localhost:8789",
+    "--latency-bench",
+    "--runs",
+    "20",
+    "--out",
+    "eval/results/qwen3.5-9b-v2/",
+    "--x-noul-style",
+    "letter",
+    "--x-permutations",
+    "2",
+    "--x-heading",
+    "document",
+    "--config",
+    "v2",
+    "--server-dir",
+    "server-v2"
+   ],
+   "reverse_options": false
+  }
+ ]
+}

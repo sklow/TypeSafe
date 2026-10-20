@@ -1,0 +1,258 @@
+{
+ "offset_pdf_page_of_printed_1": 11,
+ "pdf_pages": 111,
+ "headings": [
+  {
+   "level": 1,
+   "num": "1",
+   "title": "序論",
+   "printed": 1,
+   "pdf_page": 11
+  },
+  {
+   "level": 2,
+   "num": "1.1",
+   "title": "ヘリウム",
+   "printed": 1,
+   "pdf_page": 11
+  },
+  {
+   "level": 2,
+   "num": "1.2",
+   "title": "相転移",
+   "printed": 2,
+   "pdf_page": 12
+  },
+  {
+   "level": 2,
+   "num": "1.3",
+   "title": "超流動転移",
+   "printed": 2,
+   "pdf_page": 12
+  },
+  {
+   "level": 2,
+   "num": "1.4",
+   "title": "graphite上He薄膜",
+   "printed": 3,
+   "pdf_page": 13
+  },
+  {
+   "level": 2,
+   "num": "1.5",
+   "title": "graphite上He薄膜に関する先行研究",
+   "printed": 7,
+   "pdf_page": 17
+  },
+  {
+   "level": 1,
+   "num": "2",
+   "title": "本研究の目的",
+   "printed": 20,
+   "pdf_page": 30
+  },
+  {
+   "level": 2,
+   "num": "2.1",
+   "title": "先行研究の問題点",
+   "printed": 20,
+   "pdf_page": 30
+  },
+  {
+   "level": 2,
+   "num": "2.2",
+   "title": "目的と研究手法",
+   "printed": 20,
+   "pdf_page": 30
+  },
+  {
+   "level": 1,
+   "num": "3",
+   "title": "原理",
+   "printed": 22,
+   "pdf_page": 32
+  },
+  {
+   "level": 2,
+   "num": "3.1",
+   "title": "水晶振動子",
+   "printed": 22,
+   "pdf_page": 32
+  },
+  {
+   "level": 2,
+   "num": "3.2",
+   "title": "強制振動",
+   "printed": 23,
+   "pdf_page": 33
+  },
+  {
+   "level": 2,
+   "num": "3.3",
+   "title": "動的応答測定",
+   "printed": 26,
+   "pdf_page": 36
+  },
+  {
+   "level": 2,
+   "num": "3.4",
+   "title": "実験で用いたgraphite基盤",
+   "printed": 28,
+   "pdf_page": 38
+  },
+  {
+   "level": 1,
+   "num": "4",
+   "title": "実験装置",
+   "printed": 29,
+   "pdf_page": 39
+  },
+  {
+   "level": 2,
+   "num": "4.1",
+   "title": "graphite基盤を接合した水晶振動子の製作",
+   "printed": 29,
+   "pdf_page": 39
+  },
+  {
+   "level": 2,
+   "num": "4.2",
+   "title": "QCM法の試料セル",
+   "printed": 32,
+   "pdf_page": 42
+  },
+  {
+   "level": 2,
+   "num": "4.3",
+   "title": "MMCXコネクタの真空シール",
+   "printed": 35,
+   "pdf_page": 45
+  },
+  {
+   "level": 2,
+   "num": "4.4",
+   "title": "phase-lock法",
+   "printed": 37,
+   "pdf_page": 47
+  },
+  {
+   "level": 2,
+   "num": "4.5",
+   "title": "測定システム",
+   "printed": 37,
+   "pdf_page": 47
+  },
+  {
+   "level": 2,
+   "num": "4.6",
+   "title": "試料用ヘリウムの導入方法",
+   "printed": 39,
+   "pdf_page": 49
+  },
+  {
+   "level": 2,
+   "num": "4.7",
+   "title": "アニールについて",
+   "printed": 39,
+   "pdf_page": 49
+  },
+  {
+   "level": 2,
+   "num": "4.8",
+   "title": "He-He希釈冷凍機",
+   "printed": 40,
+   "pdf_page": 50
+  },
+  {
+   "level": 2,
+   "num": "4.9",
+   "title": "温度計",
+   "printed": 42,
+   "pdf_page": 52
+  },
+  {
+   "level": 1,
+   "num": "5",
+   "title": "結果・考察",
+   "printed": 43,
+   "pdf_page": 53
+  },
+  {
+   "level": 2,
+   "num": "5.1",
+   "title": "予備測定の結果",
+   "printed": 43,
+   "pdf_page": 53
+  },
+  {
+   "level": 2,
+   "num": "5.2",
+   "title": "He/Grafoil/音叉型水晶振動子",
+   "printed": 52,
+   "pdf_page": 62
+  },
+  {
+   "level": 2,
+   "num": "5.3",
+   "title": "He/Grafoil/ATカット水晶振動子",
+   "printed": 74,
+   "pdf_page": 84
+  },
+  {
+   "level": 2,
+   "num": "5.4",
+   "title": "He/ZYX graphite/音叉型水晶振動子",
+   "printed": 80,
+   "pdf_page": 90
+  },
+  {
+   "level": 1,
+   "num": "6",
+   "title": "結論",
+   "printed": 88,
+   "pdf_page": 98
+  },
+  {
+   "level": 1,
+   "num": "付録A",
+   "title": "線型分散関係と熱容量",
+   "printed": 91,
+   "pdf_page": 101
+  },
+  {
+   "level": 1,
+   "num": "付録B",
+   "title": "He吸着膜の弾性異常",
+   "printed": 94,
+   "pdf_page": 104
+  },
+  {
+   "level": 1,
+   "num": "付録C",
+   "title": "共鳴曲線の異常な振る舞い",
+   "printed": 95,
+   "pdf_page": 105
+  },
+  {
+   "level": 1,
+   "num": "付録D",
+   "title": "摩擦に関する解析",
+   "printed": 97,
+   "pdf_page": 107
+  },
+  {
+   "level": 2,
+   "num": "D.1",
+   "title": "デバイの関係式とCole-Cole plot",
+   "printed": 97,
+   "pdf_page": 107
+  },
+  {
+   "level": 2,
+   "num": "D.2",
+   "title": "実験結果でのプロット",
+   "printed": 97,
+   "pdf_page": 107
+  }
+ ]
+}

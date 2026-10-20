@@ -1,0 +1,2 @@
+{"id":"e1","question":"graphite 基盤が吸着基盤として適している理由を説明してください。","key_points":["吸着面が原子レベルで平坦","吸着ポテンシャルの凹凸が周期的"],"common_errors":["層間が共有結合"],"reference_answer":"graphite は吸着面が原子レベルで平坦で、吸着ポテンシャルの凹凸が周期的であるため。"}
+{"id":"e2","question":"水晶振動子とは何か、簡単に説明してください。","key_points":["共振周波数が高精度"],"common_errors":[],"reference_answer":"交流信号を取得する素子。"}

@@ -1,0 +1,51 @@
+{
+ "model": "qwen3.5-0.8b-rev",
+ "api": "http://localhost:8788",
+ "protocol": "auto",
+ "mock": false,
+ "first_started_at": "2026-10-06T15:04:38.434Z",
+ "reverse_options": true,
+ "prompts_sha256": "c86f9ea7bb8271a6e6e68e9abee25e80e8682c3d3d823e74e516b677f6c232a3",
+ "server_sha256": {
+  "format.ts": "7fdc55e0042be76daf39fc1dd2b5292c05269e5bca25b2ddb194817b7c99c4cc",
+  "index.ts": "57049a8343f0dbf44bc524e821234ebc62df27c71d517c433bf37a81d130cf85",
+  "llama.ts": "1cc5b9774eb6b11357b00b4795f0b0c05fc16240129efa66c425f85a43dadd49",
+  "prompts.ts": "c86f9ea7bb8271a6e6e68e9abee25e80e8682c3d3d823e74e516b677f6c232a3",
+  "types.ts": "cd5ab3b2760b0b948905ede822cf078382c9e45e67cd419c0c8f80ec35cedbc7"
+ },
+ "tasks_meta_sha256": {
+  "ag_news": "ba7ab214b78cf18b3a45c5f8fd1ad62724f1e4ce78c24468d6b02b77125945a0",
+  "banking77_15": "3365a08a09e859d84640ec2614ea498167fe80a6bbb1c99734e698e5f6bfeb4d",
+  "boolq": "5a31aa7db1ed4a7828f6dfb94df3f0c043ee8d60ba9a75a7d83f2f109e42437b",
+  "marc_ja_positive": "d4d653b667b6f861c631bb098a28ac55bd86463337870af61480029a04ed6b25",
+  "massive_ja_15": "85b7076a5bae0244aebe8be398e5208123ec8263202f66deb36ce728e364debf",
+  "sst5": "b512bb5cedb733a6511e3ad6d2a601176a570e1cf3a563877f840f41c1799cfa"
+ },
+ "tasks_data_sha256": {
+  "ag_news": "107f6ba0f3a4055bf5043694336b1c1e25d0766c2426ddbaafe803fd77871e4f",
+  "banking77_15": "2983e39ada20fbf020403199aebfb68b4e05f95c6f5e829d6916271e6f7230bf",
+  "boolq": "e923e3706660b7995a806496e56f040a0973b8803e0962ed32684e16338bbcb8",
+  "marc_ja_positive": "2d74f3372d50645639fe8a2a6b8f07ece149b881a81d00d59a4110ec978bd015",
+  "massive_ja_15": "75805b71aa8a6474f55f65a32043fb8ec451690317f745ee48f304499e37075c",
+  "sst5": "3744084669bb4d65ba2b969fff15224711b5a73583c7891acfed9f370fbd9cab"
+ },
+ "invocations": [
+  {
+   "at": "2026-10-06T15:04:38.434Z",
+   "argv": [
+    "--model",
+    "qwen3.5-0.8b-rev",
+    "--api",
+    "http://localhost:8788",
+    "--tasks",
+    "banking77_15,massive_ja_15",
+    "--reverse-options",
+    "--concurrency",
+    "2",
+    "--out",
+    "eval/results/qwen3.5-0.8b-rev/"
+   ],
+   "reverse_options": true
+  }
+ ]
+}

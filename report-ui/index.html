@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jev ローカル再現 — 評価結果</title>
+<style>
+:root { --bg:#f4f3ef; --panel:#fff; --ink:#1f2a37; --muted:#6b7280; --line:#e3e1da; --accent:#2f5d62;
+  --A:#2e7d4f; --B:#b88a00; --C:#b4531a; --U:#8a8f98; --raw:#c1440e; --cal:#2f5d62; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.5 -apple-system,"Hiragino Sans","Noto Sans JP","Segoe UI",sans-serif; }
+header { position:sticky; top:0; z-index:5; height:48px; display:flex; align-items:center; justify-content:space-between; padding:0 28px; background:var(--panel); border-bottom:1px solid var(--line); }
+header h1 { margin:0; font-size:16px; } header h1 span { color:var(--muted); font-weight:400; font-size:13px; margin-left:10px; }
+nav a { color:var(--muted); text-decoration:none; font-size:13px; margin-left:18px; } nav a:hover { color:var(--ink); }
+#gen { color:var(--muted); font-size:12px; margin-left:18px; }
+section { height:calc(100vh - 48px); min-height:740px; padding:20px 28px 70px; display:flex; flex-direction:column; scroll-margin-top:48px; }
+section h2 { margin:0 0 2px; font-size:19px; } section .sub { color:var(--muted); font-size:13px; margin-bottom:12px; }
+.card { background:var(--panel); border:1px solid var(--line); border-radius:10px; padding:14px 16px; }
+.grow { flex:1; min-height:0; display:flex; gap:16px; }
+table { border-collapse:collapse; width:100%; font-size:13px; }
+th { text-align:left; font-weight:600; color:var(--muted); font-size:12px; padding:6px 8px; border-bottom:1px solid var(--line); }
+td { padding:8px 8px; border-bottom:1px solid #f0eee8; vertical-align:middle; }
+.badge { display:inline-block; min-width:44px; text-align:center; color:#fff; font-weight:700; border-radius:6px; padding:2px 8px; }
+.badge.A{background:var(--A)} .badge.B{background:var(--B)} .badge.C{background:var(--C)} .badge.U{background:var(--U)}
+.g { display:inline-block; width:22px; height:22px; line-height:22px; text-align:center; border-radius:50%; font-size:12px; font-weight:700; }
+.g.ok{background:#e4f2e9;color:var(--A)} .g.ng{background:#fbece0;color:var(--C)} .g.na{background:#eee;color:var(--U)}
+.fails { color:var(--muted); font-size:12px; max-width:330px; }
+.compact td { padding:4px 8px; } .compact .fails { font-size:11px; line-height:1.3; }
+.note { color:var(--muted); font-size:12px; margin-top:8px; }
+.legend { font-size:12px; color:var(--muted); display:flex; flex-wrap:wrap; gap:6px 16px; margin-top:6px; }
+.legend i { display:inline-block; width:14px; height:3px; vertical-align:middle; margin-right:5px; border-radius:2px; }
+.seg button { font:inherit; font-size:12px; border:1px solid var(--line); background:#fbfbf9; padding:3px 12px; cursor:pointer; color:var(--ink); }
+.seg button:first-child { border-radius:6px 0 0 6px; } .seg button:last-child { border-radius:0 6px 6px 0; margin-left:-1px; }
+.seg button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+select { font:inherit; font-size:13px; border:1px solid var(--line); border-radius:6px; padding:3px 8px; background:#fbfbf9; }
+.kv { font-size:13px; } .kv div { display:flex; justify-content:space-between; padding:5px 0; border-bottom:1px dashed var(--line); }
+.kv b { font-variant-numeric:tabular-nums; }
+.row { display:flex; align-items:center; gap:12px; margin-bottom:8px; }
+svg text { font-family:inherit; }
+.empty { color:var(--muted); padding:30px; text-align:center; }
+
+@media (max-width: 600px) {
+  header { height:auto; flex-wrap:wrap; padding:10px 14px; gap:4px; } header h1 { font-size:18px; } header h1 span { display:block; margin:0; font-size:12.5px; } nav { display:none; } #gen { margin:0; }
+  body { font-size:16px; } section { height:auto; min-height:0; padding:18px 14px 150px; } section h2 { font-size:21px; line-height:1.35; } section .sub { font-size:14px; }
+  .grow { flex-direction:column; } .grow .card { flex:none !important; }
+  table { font-size:14px; } th { font-size:12px; padding:5px 3px; } td { padding:6px 3px; } .fails, th:last-child { display:none; }
+  .compact td { padding:5px 3px; } .badge { min-width:34px; padding:1px 6px; } .g { width:24px; height:24px; line-height:24px; }
+  .note,.legend { font-size:13px; } .kv { font-size:15px; } select { font-size:15px; max-width:100%; } .seg button { font-size:14px; padding:5px 14px; }
+  .row { flex-wrap:wrap; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Jev ローカル再現<span>評価結果ダッシュボード</span></h1>
+  <nav><a href="#s1">判定</a><a href="#s2">モデルサイズ×精度</a><a href="#s3">信頼性図</a><a href="#s4">レイテンシ</a><span id="gen"></span></nav>
+</header>
+
+<section id="s1">
+  <h2>1. 合否判定（モデル × 構成）</h2>
+  <div class="sub">A=Jev 相当 / B=単一温度の較正で Jev 的に使える / C=不可。ゲート: G1 形式・G2 精度・G3 較正（素 / 単一T 後）・G4 選択的精度・G5 レイテンシ（事前登録 <code>docs/criteria.md</code>）。v1=現行プロンプト、v2=noul レター化＋順序平均。</div>
+  <div class="card" style="flex:1; min-height:0; overflow:hidden"><div id="judge"></div></div>
+  <div class="note" id="s1note"></div>
+  <div class="card" style="margin-top:10px; font-size:12px; color:var(--muted)"><b style="color:var(--ink)">ゲート基準（test 160 件/タスク）</b>　G1 形式: mass_on_labels 平均 ≥0.95・違反 &lt;2%　/　G2 精度: boolq ≥0.75・marc_ja ≥0.85・ag_news ≥0.80・sst5 ≥0.45（off-by-one ≥0.85）・banking77_15 ≥0.75・massive_ja_15 ≥0.70　/　G3 較正: プール ECE ≤0.06（タスク別 CI 上限 ≤0.12）　/　G4 選択的精度: precision 95% で coverage ≥50%（難タスク 30%）・AUROC ≥0.75　/　G5 レイテンシ: 1 質問 warm ≤500ms・3 質問 warm ≤1s</div>
+</section>
+
+<section id="s2">
+  <div class="row"><div><h2 style="margin:0">2. モデルサイズ × タスク別正解率（test 160 件/タスク）</h2></div>
+    <div class="seg" id="cfgSeg" style="margin-left:auto"></div></div>
+  <div class="sub">点線は Jev 公表値の参考線。<b>別 split・別タスク設計のため指標的比較にとどまる</b>（Banking77 は 77 クラス、本評価は 15 クラス）。</div>
+  <div class="card" style="flex:1; min-height:0"><div id="acc"></div><div class="legend" id="accLegend"></div></div>
+</section>
+
+<section id="s3">
+  <div class="row"><h2 style="margin:0">3. 信頼性図（プール test 960 件）</h2>
+    <select id="relModel" style="margin-left:auto"></select></div>
+  <div class="sub">横軸=予測の確信度、縦軸=実際の正解率。対角線に乗るほど較正されている。素の確率 vs 全タスク calib で fit した単一温度 T 適用後。</div>
+  <div class="grow">
+    <div class="card" style="flex:0 0 640px"><div id="rel"></div></div>
+    <div class="card" style="flex:1"><div class="kv" id="relKv"></div><div class="note" id="relNote"></div></div>
+  </div>
+</section>
+
+<section id="s4">
+  <h2>4. レイテンシ（Apple M6 / llama.cpp / Q4_K_M、p50）</h2>
+  <div class="sub">warm=同一 state 反復、cold=毎回別 state。3 質問は noul+choice+score。ゲート: 1 質問 warm ≤ 500ms、3 質問 warm ≤ 1000ms。</div>
+  <div class="card" style="flex:1; min-height:0"><div id="lat"></div><div class="legend" id="latLegend"></div></div>
+</section>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const f2 = (x) => (x == null || isNaN(x) ? "–" : x.toFixed(2)), f3 = (x) => (x == null || isNaN(x) ? "–" : x.toFixed(3));
+const pc = (x) => (x == null ? "–" : (x * 100).toFixed(1) + "%");
+const CORE = ["ag_news", "banking77_15", "boolq", "marc_ja_positive", "massive_ja_15", "sst5"];
+const TASK_JA = { ag_news: "ag_news（4 択・英）", banking77_15: "banking77_15（15 択・英）", boolq: "boolq（yes/no・英）", marc_ja_positive: "marc_ja（yes/no・日）", massive_ja_15: "massive_ja_15（15 択・日）", sst5: "sst5（5 段階）" };
+const COLORS = ["#2f5d62", "#d98e04", "#6a4c93", "#c1440e", "#3a86c8", "#7a8b3a"];
+const GATE_JA = { g1: "形式", g2: "精度", g3_raw: "較正(素)", g3_T: "較正(T後)", g4: "選択的", g5: "遅延" };
+let S = null, cfg = "v1";
+
+const cfgOf = (m) => S.run_info?.[m]?.config ?? (/-v(\d+)$/.exec(m)?.[0].slice(1) ?? "v1");
+const baseOf = (m) => m.replace(/-v\d+$/, "");
+const famOf = (b) => (/gemma/i.test(b) ? 1 : 0);
+const cmpModel = (a, b) => famOf(baseOf(a)) - famOf(baseOf(b)) || sizeOf(baseOf(a)) - sizeOf(baseOf(b)) || cfgOf(a).localeCompare(cfgOf(b));
+const sizeOf = (b) => { const x = /(\d+(?:\.\d+)?)b/i.exec(b); return x ? parseFloat(x[1]) : 99; };
+const models = () => Object.keys(S.evals || {}).filter((m) => !/-rev$/.test(m)).sort(cmpModel);
+const label = (m) => baseOf(m).replace(/^qwen/i, "Qwen").replace(/^gemma-?/i, "Gemma ").replace(/-it$/i, "").replace(/-q4_k_m$/i, "");
+
+function gateCell(g) {
+  if (!g) return '<span class="g na">–</span>';
+  return g.pass === true ? '<span class="g ok">✓</span>' : g.pass === false ? '<span class="g ng">✗</span>' : '<span class="g na">?</span>';
+}
+function renderJudge() {
+  const rows_n = models().length;
+  const rows = models().map((m) => {
+    const j = S.judged?.[m]; const v = j?.verdict ?? "未判定";
+    const k = v === "A" || v === "B" || v === "C" ? v : "U";
+    const first = j && ["g1", "g2", "g3_raw", "g3_T", "g4", "g5"].map((g) => j[g]).filter((g) => g && g.fails?.length).slice(0, 1)[0];
+    const fails = first ? (rows_n > 6 ? first.fails.slice(0, 1).map(esc).join("") + (first.fails.length > 1 ? `（他 ${first.fails.length - 1} 件）` : "") : first.fails.slice(0, 2).map(esc).join("<br>") + (first.fails.length > 2 ? `<br>他 ${first.fails.length - 2} 件` : "")) : (j?.missing?.length ? "未計測: " + j.missing.map(esc).join(", ") : "—");
+    return `<tr><td><b>${esc(label(m))}</b></td><td>${esc(cfgOf(m))}</td><td><span class="badge ${k}">${esc(v)}</span></td>` +
+      ["g1", "g2", "g3_raw", "g3_T", "g4", "g5"].map((g) => `<td style="text-align:center">${gateCell(j?.[g])}</td>`).join("") +
+      `<td class="fails">${fails}</td></tr>`;
+  });
+  $("judge").classList.toggle("compact", rows.length > 6);
+  $("judge").innerHTML = rows.length ? `<table><thead><tr><th>モデル</th><th>構成</th><th>判定</th>${Object.values(GATE_JA).map((x) => `<th style="text-align:center">${x}</th>`).join("")}<th>主な不通過理由</th></tr></thead><tbody>${rows.join("")}</tbody></table>` : '<div class="empty">データなし</div>';
+  const w = models().filter((m) => ["A", "B"].includes(S.judged?.[m]?.verdict));
+  $("s1note").textContent = w.length ? `A/B を満たす最小モデル: ${label(w[0])}（${cfgOf(w[0])}）` : "現時点で A/B を満たすモデルはありません（結論は A または B を満たす最小モデル）。";
+}
+
+// ---- SVG helpers ----
+const bump = (g, k) => (innerWidth < 600 ? g.replace(/font-size="(\d+)"/g, (m, n) => `font-size="${Math.round(n * k)}"`) : g);
+
+const svg = (w, h, inner) => `<svg viewBox="0 0 ${w} ${h}" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img">${inner}</svg>`;
+const line = (x1, y1, x2, y2, o = "") => `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" ${o}/>`;
+const text = (x, y, s, o = "") => `<text x="${x}" y="${y}" ${o}>${esc(s)}</text>`;
+
+function renderAcc() {
+  const segs = ["v1", "v2"].filter((c) => models().some((m) => cfgOf(m) === c));
+  if (!segs.includes(cfg)) cfg = segs[0] ?? "v1";
+  $("cfgSeg").innerHTML = segs.map((c) => `<button class="${c === cfg ? "on" : ""}" data-c="${c}">構成 ${c}</button>`).join("");
+  $("cfgSeg").querySelectorAll("button").forEach((b) => (b.onclick = () => { cfg = b.dataset.c; renderAcc(); }));
+  const ms = models().filter((m) => cfgOf(m) === cfg);
+  if (!ms.length) { $("acc").innerHTML = '<div class="empty">データなし</div>'; return; }
+  const NW = innerWidth < 600, f = NW ? 1.25 : 1, W = NW ? 520 : 1180, H = NW ? 560 : 500, L = NW ? 62 : 56, R = NW ? 14 : 210, T = 20, B = 46, pw = W - L - R, ph = H - T - B;
+  const X = (i) => L + (ms.length === 1 ? pw / 2 : (pw * (i + 0.5)) / ms.length), Y = (v) => T + ph * (1 - v);
+  let g = "";
+  for (let v = 0; v <= 1.0001; v += 0.2) g += line(L, Y(v), W - R, Y(v), 'stroke="#e8e6df"') + text(L - 8, Y(v) + 4, (v * 100).toFixed(0) + "%", 'text-anchor="end" font-size="12" fill="#6b7280"');
+  // 参考線（Jev 公表値。別 split）。ラベルは右余白に置いてデータと重ねない
+  [[0.81, "Jev 公表 Banking77", "77 クラス中央値 0.81"], [0.678, "Jev 公式 evals", "67.8%"]].forEach(([v, t, t2], k) => {
+    g += line(L, Y(v), W - R, Y(v), 'stroke="#8a8f98" stroke-dasharray="6 5" stroke-width="1.3"');
+    if (NW) { /* 狭い画面では凡例の注記に回す */ }
+    else g += text(W - R + 8, Y(v) - 2, t, 'font-size="11" fill="#6b7280"') + text(W - R + 8, Y(v) + 12, t2 + "（参考・別 split）", 'font-size="11" fill="#6b7280"');
+  });
+  // モデル系列の境目に区切り線（系列をまたぐ線は引かない）
+  ms.forEach((m, i) => { if (i && famOf(baseOf(m)) !== famOf(baseOf(ms[i - 1]))) g += line((X(i) + X(i - 1)) / 2, T, (X(i) + X(i - 1)) / 2, T + ph, 'stroke="#c9c6bb" stroke-dasharray="3 4"'); });
+  ms.forEach((m, i) => (g += text(X(i), H - 18, NW ? label(m).replace(/^Qwen3\.5-/, "Qw ").replace(/^Gemma 4-/, "Gm ") : label(m), `text-anchor="middle" font-size="${NW ? 12 : 13}" font-weight="600" fill="#1f2a37"`)));
+  CORE.forEach((t, k) => {
+    const allPts = ms.map((m, i) => [X(i), S.evals[m]?.[t]?.test?.accuracy, famOf(baseOf(m))]).filter((p) => p[1] != null);
+    if (!allPts.length) return;
+    [0, 1].forEach((f) => { const q = allPts.filter((p) => p[2] === f); if (q.length > 1) g += `<polyline fill="none" stroke="${COLORS[k]}" stroke-width="2.4" points="${q.map((p) => p[0] + "," + Y(p[1])).join(" ")}"/>`; });
+    allPts.forEach((p) => (g += `<circle cx="${p[0]}" cy="${Y(p[1])}" r="5" fill="${COLORS[k]}"><title>${esc(t)} ${pc(p[1])}</title></circle>` + text(p[0] + 8, Y(p[1]) - 7, (p[1] * 100).toFixed(0), `font-size="11" fill="${COLORS[k]}"`)));
+  });
+  $("acc").innerHTML = svg(W, H, bump(g, 1.3));
+  $("accLegend").innerHTML = CORE.map((t, k) => `<span><i style="background:${COLORS[k]}"></i>${esc(TASK_JA[t])}</span>`).join("") + (innerWidth < 600 ? '<span style="width:100%">点線: Jev 公表 Banking77 中央値 0.81 / 公式 evals 67.8%（参考・別 split）</span>' : '<span><i style="background:#8a8f98"></i>Jev 公表値（参考線）</span>');
+}
+
+async function renderRel() {
+  const ms = models().filter((m) => S.pooled?.[m]);
+  const rank = { A: 0, B: 1 }; // A/B 以外（C・未判定）は同順位、正解率で決める
+  const best = [...ms].sort((a, b) => (rank[S.judged?.[a]?.verdict] ?? 2) - (rank[S.judged?.[b]?.verdict] ?? 2) || (S.pooled[b].raw.accuracy - S.pooled[a].raw.accuracy))[0];
+  const sel = $("relModel"); const cur = sel.value || best;
+  sel.innerHTML = ms.map((m) => `<option value="${esc(m)}" ${m === cur ? "selected" : ""}>${esc(label(m))} ${esc(cfgOf(m))}${m === best ? "（最良）" : ""}</option>`).join("");
+  sel.onchange = renderRel;
+  const m = sel.value || best; if (!m) { $("rel").innerHTML = '<div class="empty">データなし</div>'; return; }
+  const p = S.pooled[m];
+  let r = null;
+  try { const res = await fetch(`/api/reliability?model=${encodeURIComponent(m)}&T=${p.T_pool}`); if (res.ok) r = await res.json(); } catch {}
+  const W = 600, H = 560, L = 60, Rr = 20, T = 20, B = 60, pw = W - L - Rr, ph = H - T - B - 60;
+  const X = (v) => L + pw * v, Y = (v) => T + ph * (1 - v);
+  let g = "";
+  for (let v = 0; v <= 1.0001; v += 0.2) g += line(L, Y(v), W - Rr, Y(v), 'stroke="#e8e6df"') + line(X(v), T, X(v), T + ph, 'stroke="#eeece6"') +
+    text(L - 8, Y(v) + 4, (v * 100).toFixed(0) + "%", 'text-anchor="end" font-size="12" fill="#6b7280"') + text(X(v), T + ph + 18, (v * 100).toFixed(0) + "%", 'text-anchor="middle" font-size="12" fill="#6b7280"');
+  g += line(X(0), Y(0), X(1), Y(1), 'stroke="#8a8f98" stroke-dasharray="5 5"') + text(L + pw / 2, T + ph + 40, "予測の確信度", 'text-anchor="middle" font-size="12" fill="#6b7280"') +
+    `<text transform="translate(16 ${T + ph / 2}) rotate(-90)" text-anchor="middle" font-size="12" fill="#6b7280">正解率</text>`;
+  if (r) {
+    const draw = (b, col) => {
+      const pts = b.bins.filter((x) => x.n);
+      let s = `<polyline fill="none" stroke="${col}" stroke-width="2.4" points="${pts.map((x) => X(x.conf) + "," + Y(x.acc)).join(" ")}"/>`;
+      pts.forEach((x) => (s += `<circle cx="${X(x.conf)}" cy="${Y(x.acc)}" r="${Math.max(3, Math.min(11, Math.sqrt(x.n) * 0.8))}" fill="${col}" fill-opacity=".85"><title>n=${x.n} conf ${f2(x.conf)} acc ${f2(x.acc)}</title></circle>`));
+      return s;
+    };
+    g += draw(r.raw, "#c1440e") + draw(r.pooled_T, "#2f5d62");
+    // 件数ヒストグラム（素）
+    const bw = pw / 10, mx = Math.max(...r.raw.bins.map((x) => x.n), 1);
+    r.raw.bins.forEach((x, i) => (g += `<rect x="${L + i * bw + 3}" y="${H - 8 - (x.n / mx) * 48}" width="${bw - 6}" height="${(x.n / mx) * 48}" fill="#c9c6bb"/>`));
+    g += text(L, H - 62 + 4, "件数（素）", 'font-size="11" fill="#6b7280"');
+  } else g += text(W / 2, H / 2, "個票データを読めません", 'text-anchor="middle" fill="#6b7280"');
+  g += `<g font-size="12"><rect x="${L + 12}" y="${T + 6}" width="12" height="3" fill="#c1440e"/>${text(L + 30, T + 12, "素の確率", 'fill="#1f2a37"')}<rect x="${L + 12}" y="${T + 26}" width="12" height="3" fill="#2f5d62"/>${text(L + 30, T + 32, "単一 T 適用後（T=" + p.T_pool + "）", 'fill="#1f2a37"')}</g>`;
+  $("rel").innerHTML = svg(W, H, bump(g, 1.2));
+  const ci = (b, k) => (b.ci?.[k] ? ` [${f3(b.ci[k][0])}–${f3(b.ci[k][1])}]` : "");
+  $("relKv").innerHTML = [["モデル / 構成", `${label(m)} / ${cfgOf(m)}`], ["判定", S.judged?.[m]?.verdict ?? "未判定"], ["プール test 件数", p.n_test], ["正解率", pc(p.raw.accuracy)],
+    ["ECE（素）", f3(p.raw.ece) + ci(p.raw, "ece")], ["ECE（単一 T 後）", f3(p.pooled_T.ece) + ci(p.pooled_T, "ece")], ["合格ライン（ECE）", "≤ 0.060"],
+    ["T_pool", `${p.T_pool}（calib ${p.n_calib} 件）`], ["AUROC", f3(p.raw.auroc)], ["Brier 素 → T後", `${f3(p.raw.brier)} → ${f3(p.pooled_T.brier)}`]].map(([k, v]) => `<div><span>${esc(k)}</span><b>${esc(v)}</b></div>`).join("");
+  $("relNote").textContent = "Jev 公表の第三者 ECE は 0.06〜0.16（split・タスクが異なる参考値）。信頼性図は 6 タスクのプール、10 等幅 bin、点の大きさ ∝ √件数。";
+}
+
+function renderLat() {
+  const bench = S.latency_bench || {};
+  const rows = Object.keys(bench).filter((m) => !/-rev$/.test(m)).sort(cmpModel);
+  if (!rows.length) { $("lat").innerHTML = '<div class="empty">データなし</div>'; return; }
+  const series = [["noul_only_same_state_warm", "1 質問 warm", "#2f5d62"], ["three_questions_same_state_warm", "3 質問 warm", "#d98e04"], ["three_questions_vary_state_cold", "3 質問 cold", "#c1440e"]];
+  const val = (m, k) => bench[m]?.[k]?.client_ms?.p50;
+  const mx = Math.max(1200, ...rows.flatMap((m) => series.map(([k]) => val(m, k) ?? 0))) * 1.05;
+  const NW = innerWidth < 600, W = NW ? 520 : 1180, rowH = Math.min(NW ? 110 : 150, (NW ? 600 : 460) / rows.length), L = NW ? 138 : 190, R = NW ? 56 : 40, T = 24, B = 30, H = T + B + rowH * rows.length, pw = W - L - R, X = (v) => L + (pw * v) / mx;
+  let g = "";
+  for (let v = 0; v <= mx; v += NW ? 400 : 200) g += line(X(v), T, X(v), H - B, 'stroke="#eeece6"') + text(X(v), H - B + 16, v + "ms", 'text-anchor="middle" font-size="11" fill="#6b7280"');
+  g += line(X(500), T - 6, X(500), H - B, 'stroke="#2e7d4f" stroke-dasharray="5 4" stroke-width="1.5"') + text(X(500) - 4, T - 8, NW ? "500ms" : "1 質問ゲート 500ms", 'font-size="11" fill="#2e7d4f"');
+  g += line(X(1000), T - 6, X(1000), H - B, 'stroke="#2e7d4f" stroke-dasharray="5 4" stroke-width="1.5"') + text(X(1000) + 4, T - 8, NW ? "1000ms" : "3 質問ゲート 1000ms", 'font-size="11" fill="#2e7d4f"');
+  rows.forEach((m, i) => {
+    const y0 = T + i * rowH, bh = Math.min(30, (rowH - 14) / 3);
+    g += text(L - 12, y0 + rowH / 2 + 4, `${NW ? label(m).replace(/^Qwen3\.5-/, "Qw ").replace(/^Gemma 4-/, "Gm ") : label(m)} ${cfgOf(m)}`, 'text-anchor="end" font-size="13" font-weight="600" fill="#1f2a37"');
+    series.forEach(([k, , col], j) => {
+      const v = val(m, k); if (v == null) return; const y = y0 + 7 + j * (bh + 3);
+      g += `<rect x="${L}" y="${y}" width="${X(v) - L}" height="${bh}" rx="3" fill="${col}"/>` + text(X(v) + 6, y + bh - 5, Math.round(v) + " ms", 'font-size="13" fill="#1f2a37"');
+    });
+  });
+  $("lat").innerHTML = svg(W, H, bump(g, 1.15));
+  $("latLegend").innerHTML = series.map(([, t, c]) => `<span><i style="background:${c}"></i>${t}</span>`).join("") + "<span>bench の state は約 630 文字（≒150〜200 トークン）</span>";
+}
+
+async function load() {
+  try {
+    const res = await fetch("/summary.json", { cache: "no-store" });
+    S = await res.json();
+    if (S.error) throw new Error(S.error);
+  } catch (e) { document.body.insertAdjacentHTML("afterbegin", `<div class="empty">summary.json を読めません: ${esc(e.message)}</div>`); return; }
+  $("gen").textContent = S.generated_at ? "集計 " + new Date(S.generated_at).toLocaleString("ja-JP", { hour12: false }) : "";
+  renderJudge(); renderAcc(); await renderRel(); renderLat();
+}
+load();
+</script>
+</body>
+</html>

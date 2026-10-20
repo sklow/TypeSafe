@@ -1,0 +1,31 @@
+{
+ "name": "ag_news",
+ "dataset": "fancyzhx/ag_news",
+ "config": "default",
+ "split": "test",
+ "num_rows": 7600,
+ "features": [
+  {
+   "feature_idx": 0,
+   "name": "text",
+   "type": {
+    "dtype": "string",
+    "_type": "Value"
+   }
+  },
+  {
+   "feature_idx": 1,
+   "name": "label",
+   "type": {
+    "names": [
+     "World",
+     "Sports",
+     "Business",
+     "Sci/Tech"
+    ],
+    "_type": "ClassLabel"
+   }
+  }
+ ],
+ "fetched_at": "2026-10-06T14:47:17.254Z"
+}
